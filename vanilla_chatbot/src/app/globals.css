@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ---- Study palette -------------------------------------------------- */
+:root {
+  --background: #ffedb9;
+  --foreground: #443625;
+  --card: #fffaf0;
+  --primary: #ffcb56;
+  --secondary: #fff3d1;
+  --muted-foreground: #6f5b3f;
+  --border: #e7c97f;
+  --header: #ffa259;
+  --input-surface: #fff8e6;
+  --radius: 0.5rem;
+  --shadow-study: 0 16px 34px -24px rgba(68, 54, 37, 0.42);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-header: var(--header);
+  --color-input-surface: var(--input-surface);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-figtree), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-figtree), sans-serif;
+  }
+}
+
+@utility shadow-study {
+  box-shadow: var(--shadow-study);
+}
