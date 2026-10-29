@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     return result.toUIMessageStreamResponse();
   } catch (error) {
-    console.error("Vanilla chatbot error:", error);
+    console.error("Adaptive chatbot error:", error);
     return NextResponse.json({ error: "Failed to generate response" }, { status: 500 });
   }
 }

@@ -51,7 +51,7 @@ export default function ChatPage() {
   const showOnboarding = onboarded === false;
   const { messages, sendMessage, status, setMessages } = useChat({
     id: "chatbot-single-conversation",
-    transport: new DefaultChatTransport({ api: "/api/vanilla_chat" }),
+    transport: new DefaultChatTransport({ api: "/api/adaptive-chat" }),
   });
 
   const isBusy = status === "submitted" || status === "streaming";
