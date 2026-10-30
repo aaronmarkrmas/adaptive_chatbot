@@ -1,0 +1,1123 @@
+﻿instance_id,emotion_category,emoji_used,no_emoji,producer_generation,response_frequency,dominant_intended_tone,perceiver_generation,perceiver_interpreted_tone,perceiver_trust_rating,perceiver_professionalism_rating,alignment_label
+INST_000001,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,4,Match
+INST_000002,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000003,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,2,Match
+INST_000004,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,1,Match
+INST_000005,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,5,5,Match
+INST_000006,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000007,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000008,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,4,Match
+INST_000009,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Other: Excitement,4,4,No Match
+INST_000010,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,4,Match
+INST_000011,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000012,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,5,1,Match
+INST_000013,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,1,Match
+INST_000014,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,4,Match
+INST_000015,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,4,Match
+INST_000016,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,3,Match
+INST_000017,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,5,3,Match
+INST_000018,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,4,Match
+INST_000019,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,3,3,Match
+INST_000020,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000021,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,4,Match
+INST_000022,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000023,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,2,Match
+INST_000024,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,3,3,Match
+INST_000025,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000026,Happiness,😍,No,Gen Z,34,Happiness,Millennial,"Other: Love, admiration",5,5,No Match
+INST_000027,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,4,Match
+INST_000028,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000029,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,3,2,Match
+INST_000030,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,2,1,Match
+INST_000031,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,1,Match
+INST_000032,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,1,Match
+INST_000033,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,1,Match
+INST_000034,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,3,Match
+INST_000035,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,1,Match
+INST_000036,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Other: Supportive,5,2,No Match
+INST_000037,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,3,Match
+INST_000038,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Other: Sarcastic,1,1,No Match
+INST_000039,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000040,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,3,2,Match
+INST_000041,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000042,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,3,Match
+INST_000043,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,3,Match
+INST_000044,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_000045,Happiness,😍,No,Gen Z,34,Happiness,Millennial,Happiness,4,4,Match
+INST_000046,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,1,Match
+INST_000047,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,5,3,Match
+INST_000048,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,5,Match
+INST_000049,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Other: Warm but not necessarily deeply invested,2,2,No Match
+INST_000050,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,3,Match
+INST_000051,Happiness,😍,No,Gen Z,34,Happiness,Gen Z,Happiness,4,3,Match
+INST_000052,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,4,Match
+INST_000053,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000054,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,2,Match
+INST_000055,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,1,Match
+INST_000056,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,5,5,Match
+INST_000057,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000058,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000059,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,4,Match
+INST_000060,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Other: Excitement,4,4,No Match
+INST_000061,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,4,Match
+INST_000062,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000063,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,5,1,Match
+INST_000064,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,1,Match
+INST_000065,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,4,Match
+INST_000066,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,4,Match
+INST_000067,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,3,Match
+INST_000068,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,5,3,Match
+INST_000069,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,4,Match
+INST_000070,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,3,3,Match
+INST_000071,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000072,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,4,Match
+INST_000073,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000074,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,2,Match
+INST_000075,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,3,3,Match
+INST_000076,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000077,Happiness,😍,No,Millennial,18,Happiness,Millennial,"Other: Love, admiration",5,5,No Match
+INST_000078,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,4,Match
+INST_000079,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000080,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,3,2,Match
+INST_000081,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,2,1,Match
+INST_000082,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,1,Match
+INST_000083,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,1,Match
+INST_000084,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,1,Match
+INST_000085,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,3,Match
+INST_000086,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,1,Match
+INST_000087,Happiness,😍,No,Millennial,18,Happiness,Millennial,Other: Supportive,5,2,No Match
+INST_000088,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,3,Match
+INST_000089,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Other: Sarcastic,1,1,No Match
+INST_000090,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000091,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,3,2,Match
+INST_000092,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000093,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,3,Match
+INST_000094,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,3,Match
+INST_000095,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,5,5,Match
+INST_000096,Happiness,😍,No,Millennial,18,Happiness,Millennial,Happiness,4,4,Match
+INST_000097,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,1,Match
+INST_000098,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,5,3,Match
+INST_000099,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,5,Match
+INST_000100,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Other: Warm but not necessarily deeply invested,2,2,No Match
+INST_000101,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,3,Match
+INST_000102,Happiness,😍,No,Millennial,18,Happiness,Gen Z,Happiness,4,3,Match
+INST_000103,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000104,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,3,4,Match
+INST_000105,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000106,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,3,Match
+INST_000107,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,5,Match
+INST_000108,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000109,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,2,1,Match
+INST_000110,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000111,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Respectful,4,4,No Match
+INST_000112,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000113,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,2,Match
+INST_000114,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000115,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,2,Match
+INST_000116,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,4,Match
+INST_000117,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: you also want that kind of relationship with someone else,3,3,No Match
+INST_000118,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Grateful,4,2,No Match
+INST_000119,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,3,Match
+INST_000120,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Other: Thankful,5,4,No Match
+INST_000121,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,2,2,Match
+INST_000122,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,2,Match
+INST_000123,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,3,4,Match
+INST_000124,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,4,4,Match
+INST_000125,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,2,Match
+INST_000126,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Sadness,3,3,No Match
+INST_000127,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Fear,5,4,No Match
+INST_000128,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Other: prayer,5,5,No Match
+INST_000129,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,5,4,Match
+INST_000130,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Other: hopeful,4,4,No Match
+INST_000131,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,3,2,Match
+INST_000132,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Fear,4,4,No Match
+INST_000133,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,3,1,Match
+INST_000134,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Other: Relief,4,2,No Match
+INST_000135,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,4,1,Match
+INST_000136,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,5,4,Match
+INST_000137,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Peaceful,4,3,No Match
+INST_000138,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Other: Hopeful,5,4,No Match
+INST_000139,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,4,Match
+INST_000140,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,3,Match
+INST_000141,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,5,5,Match
+INST_000142,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Grateful,5,3,No Match
+INST_000143,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,4,4,Match
+INST_000144,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Fear,4,3,No Match
+INST_000145,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,4,3,Match
+INST_000146,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,5,5,Match
+INST_000147,Happiness,🙏,No,Gen Z,11,Happiness,Millennial,Happiness,3,3,Match
+INST_000148,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,3,4,Match
+INST_000149,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,4,3,Match
+INST_000150,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Polite,3,4,No Match
+INST_000151,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Other: Sincerity,3,3,No Match
+INST_000152,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,4,Match
+INST_000153,Happiness,🙏,No,Gen Z,11,Happiness,Gen Z,Happiness,5,3,Match
+INST_000154,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000155,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,3,4,Match
+INST_000156,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000157,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,3,Match
+INST_000158,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,5,Match
+INST_000159,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000160,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,2,1,Match
+INST_000161,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000162,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Respectful,4,4,No Match
+INST_000163,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000164,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,2,Match
+INST_000165,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000166,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,2,Match
+INST_000167,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,4,Match
+INST_000168,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: you also want that kind of relationship with someone else,3,3,No Match
+INST_000169,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Grateful,4,2,No Match
+INST_000170,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,3,Match
+INST_000171,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Other: Thankful,5,4,No Match
+INST_000172,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,2,2,Match
+INST_000173,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,2,Match
+INST_000174,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,3,4,Match
+INST_000175,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,4,4,Match
+INST_000176,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,2,Match
+INST_000177,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Sadness,3,3,No Match
+INST_000178,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Fear,5,4,No Match
+INST_000179,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Other: prayer,5,5,No Match
+INST_000180,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,5,4,Match
+INST_000181,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Other: hopeful,4,4,No Match
+INST_000182,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,3,2,Match
+INST_000183,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Fear,4,4,No Match
+INST_000184,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,3,1,Match
+INST_000185,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Other: Relief,4,2,No Match
+INST_000186,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,4,1,Match
+INST_000187,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,5,4,Match
+INST_000188,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Peaceful,4,3,No Match
+INST_000189,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Other: Hopeful,5,4,No Match
+INST_000190,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,4,Match
+INST_000191,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,3,Match
+INST_000192,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,5,5,Match
+INST_000193,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Grateful,5,3,No Match
+INST_000194,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,4,4,Match
+INST_000195,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Fear,4,3,No Match
+INST_000196,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,4,3,Match
+INST_000197,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,5,5,Match
+INST_000198,Happiness,🙏,No,Millennial,6,Happiness,Millennial,Happiness,3,3,Match
+INST_000199,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,3,4,Match
+INST_000200,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,4,3,Match
+INST_000201,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Polite,3,4,No Match
+INST_000202,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Other: Sincerity,3,3,No Match
+INST_000203,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,4,Match
+INST_000204,Happiness,🙏,No,Millennial,6,Happiness,Gen Z,Happiness,5,3,Match
+INST_000205,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,4,Match
+INST_000206,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,3,Match
+INST_000207,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,3,Match
+INST_000208,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,5,Match
+INST_000209,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,5,Match
+INST_000210,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Other: Guilt,5,4,No Match
+INST_000211,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,2,1,Match
+INST_000212,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,3,Match
+INST_000213,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000214,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,4,Match
+INST_000215,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,4,Match
+INST_000216,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,2,Match
+INST_000217,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,4,Match
+INST_000218,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,4,Match
+INST_000219,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,2,Match
+INST_000220,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Other: Concern,4,3,No Match
+INST_000221,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,4,Match
+INST_000222,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,2,3,Match
+INST_000223,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,3,3,Match
+INST_000224,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,2,Match
+INST_000225,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Disgust,4,3,No Match
+INST_000226,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,4,4,Match
+INST_000227,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,2,Match
+INST_000228,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,4,3,Match
+INST_000229,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Fear,4,4,No Match
+INST_000230,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,5,Match
+INST_000231,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,5,Match
+INST_000232,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,5,Match
+INST_000233,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,4,4,Match
+INST_000234,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,2,Match
+INST_000235,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,4,1,Match
+INST_000236,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Other: Disappointment,4,2,No Match
+INST_000237,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,3,1,Match
+INST_000238,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,3,Match
+INST_000239,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,3,Match
+INST_000240,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,4,Match
+INST_000241,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,4,Match
+INST_000242,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,4,Match
+INST_000243,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Other: humility,5,5,No Match
+INST_000244,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,5,Match
+INST_000245,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,3,3,Match
+INST_000246,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,4,3,Match
+INST_000247,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,5,Match
+INST_000248,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,5,Match
+INST_000249,Sadness,☹️,No,Gen Z,37,Sadness,Millennial,Sadness,5,4,Match
+INST_000250,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,2,Match
+INST_000251,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,2,Match
+INST_000252,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,3,4,Match
+INST_000253,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Other: Empathy,4,3,No Match
+INST_000254,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,4,Match
+INST_000255,Sadness,☹️,No,Gen Z,37,Sadness,Gen Z,Sadness,5,3,Match
+INST_000256,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000257,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,3,Match
+INST_000258,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,3,Match
+INST_000259,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,5,Match
+INST_000260,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000261,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Other: Guilt,5,4,No Match
+INST_000262,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,2,1,Match
+INST_000263,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,3,Match
+INST_000264,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000265,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000266,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,4,Match
+INST_000267,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,2,Match
+INST_000268,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000269,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000270,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,2,Match
+INST_000271,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Other: Concern,4,3,No Match
+INST_000272,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,4,Match
+INST_000273,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,2,3,Match
+INST_000274,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,3,3,Match
+INST_000275,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,2,Match
+INST_000276,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Disgust,4,3,No Match
+INST_000277,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,4,4,Match
+INST_000278,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,2,Match
+INST_000279,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,4,3,Match
+INST_000280,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Fear,4,4,No Match
+INST_000281,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000282,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000283,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000284,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,4,4,Match
+INST_000285,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,2,Match
+INST_000286,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,4,1,Match
+INST_000287,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Other: Disappointment,4,2,No Match
+INST_000288,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,3,1,Match
+INST_000289,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,3,Match
+INST_000290,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,3,Match
+INST_000291,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,4,Match
+INST_000292,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,4,Match
+INST_000293,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,4,Match
+INST_000294,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Other: humility,5,5,No Match
+INST_000295,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000296,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,3,3,Match
+INST_000297,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,4,3,Match
+INST_000298,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000299,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000300,Sadness,☹️,No,Millennial,8,Sadness,Millennial,Sadness,5,4,Match
+INST_000301,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,2,Match
+INST_000302,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,2,Match
+INST_000303,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,3,4,Match
+INST_000304,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Other: Empathy,4,3,No Match
+INST_000305,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,4,Match
+INST_000306,Sadness,☹️,No,Millennial,8,Sadness,Gen Z,Sadness,5,3,Match
+INST_000307,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000308,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000309,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,2,Match
+INST_000310,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Happiness,5,4,No Match
+INST_000311,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,5,Match
+INST_000312,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,3,3,Match
+INST_000313,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,1,1,Match
+INST_000314,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000315,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000316,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000317,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,3,Match
+INST_000318,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,2,Match
+INST_000319,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000320,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000321,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,3,2,Match
+INST_000322,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,4,Match
+INST_000323,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,2,Match
+INST_000324,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Anger,2,2,No Match
+INST_000325,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,3,3,Match
+INST_000326,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,5,Match
+INST_000327,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,3,3,Match
+INST_000328,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,4,Match
+INST_000329,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,3,2,Match
+INST_000330,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,3,3,Match
+INST_000331,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Fear,4,4,No Match
+INST_000332,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Other: Disappointment,5,5,No Match
+INST_000333,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,5,5,Match
+INST_000334,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Disgust,5,5,No Match
+INST_000335,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,5,Match
+INST_000336,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,4,Match
+INST_000337,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,3,1,Match
+INST_000338,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Other: Regret,4,2,No Match
+INST_000339,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,3,1,Match
+INST_000340,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,5,4,Match
+INST_000341,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,3,3,Match
+INST_000342,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Other: Deep sadness,5,5,No Match
+INST_000343,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,4,Match
+INST_000344,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,3,Match
+INST_000345,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Other: Humility,5,5,No Match
+INST_000346,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,5,Match
+INST_000347,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,4,Match
+INST_000348,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,3,Match
+INST_000349,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,3,Match
+INST_000350,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,5,5,Match
+INST_000351,Sadness,😞,No,Gen Z,18,Sadness,Millennial,Sadness,4,4,Match
+INST_000352,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,3,Match
+INST_000353,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,2,Match
+INST_000354,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,2,Match
+INST_000355,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,4,3,Match
+INST_000356,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,4,Match
+INST_000357,Sadness,😞,No,Gen Z,18,Sadness,Gen Z,Sadness,5,3,Match
+INST_000358,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000359,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000360,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,2,Match
+INST_000361,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Happiness,5,4,No Match
+INST_000362,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,5,Match
+INST_000363,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,3,3,Match
+INST_000364,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,1,1,Match
+INST_000365,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000366,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000367,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000368,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,3,Match
+INST_000369,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,2,Match
+INST_000370,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000371,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000372,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,3,2,Match
+INST_000373,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,4,Match
+INST_000374,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,2,Match
+INST_000375,Sadness,😞,No,Millennial,12,Sadness,Millennial,Anger,2,2,No Match
+INST_000376,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,3,3,Match
+INST_000377,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,5,Match
+INST_000378,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,3,3,Match
+INST_000379,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,4,Match
+INST_000380,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,3,2,Match
+INST_000381,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,3,3,Match
+INST_000382,Sadness,😞,No,Millennial,12,Sadness,Millennial,Fear,4,4,No Match
+INST_000383,Sadness,😞,No,Millennial,12,Sadness,Millennial,Other: Disappointment,5,5,No Match
+INST_000384,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,5,5,Match
+INST_000385,Sadness,😞,No,Millennial,12,Sadness,Millennial,Disgust,5,5,No Match
+INST_000386,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,5,Match
+INST_000387,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,4,Match
+INST_000388,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,3,1,Match
+INST_000389,Sadness,😞,No,Millennial,12,Sadness,Millennial,Other: Regret,4,2,No Match
+INST_000390,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,3,1,Match
+INST_000391,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,5,4,Match
+INST_000392,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,3,3,Match
+INST_000393,Sadness,😞,No,Millennial,12,Sadness,Millennial,Other: Deep sadness,5,5,No Match
+INST_000394,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,4,Match
+INST_000395,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,3,Match
+INST_000396,Sadness,😞,No,Millennial,12,Sadness,Millennial,Other: Humility,5,5,No Match
+INST_000397,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,5,Match
+INST_000398,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,4,Match
+INST_000399,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,3,Match
+INST_000400,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,3,Match
+INST_000401,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,5,5,Match
+INST_000402,Sadness,😞,No,Millennial,12,Sadness,Millennial,Sadness,4,4,Match
+INST_000403,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,3,Match
+INST_000404,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,2,Match
+INST_000405,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,2,Match
+INST_000406,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,4,3,Match
+INST_000407,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,4,Match
+INST_000408,Sadness,😞,No,Millennial,12,Sadness,Gen Z,Sadness,5,3,Match
+INST_000409,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,2,Match
+INST_000410,Anger,😠,No,Millennial,6,Anger,Gen Z,Other: Shock,2,2,No Match
+INST_000411,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,1,4,Match
+INST_000412,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,5,5,Match
+INST_000413,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,5,5,Match
+INST_000414,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,1,1,Match
+INST_000415,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,2,1,Match
+INST_000416,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,2,Match
+INST_000417,Anger,😠,No,Millennial,6,Anger,Gen Z,Disgust,4,4,No Match
+INST_000418,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,3,Match
+INST_000419,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,2,3,Match
+INST_000420,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,1,1,Match
+INST_000421,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,4,Match
+INST_000422,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,2,Match
+INST_000423,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,1,2,Match
+INST_000424,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,3,Match
+INST_000425,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,5,3,Match
+INST_000426,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,3,3,Match
+INST_000427,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,3,3,Match
+INST_000428,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,2,Match
+INST_000429,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,4,Match
+INST_000430,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,4,4,Match
+INST_000431,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,2,2,Match
+INST_000432,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,3,3,Match
+INST_000433,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,3,3,Match
+INST_000434,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,5,Match
+INST_000435,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,3,Match
+INST_000436,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,5,Match
+INST_000437,Anger,😠,No,Millennial,6,Anger,Millennial,Other: Lost,3,2,No Match
+INST_000438,Anger,😠,No,Millennial,6,Anger,Millennial,Other: Sarcasm,5,1,No Match
+INST_000439,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,1,Match
+INST_000440,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,4,2,Match
+INST_000441,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,3,1,Match
+INST_000442,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,4,2,Match
+INST_000443,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,3,Match
+INST_000444,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,1,Match
+INST_000445,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,2,3,Match
+INST_000446,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,2,Match
+INST_000447,Anger,😠,No,Millennial,6,Anger,Millennial,Sadness,3,3,No Match
+INST_000448,Anger,😠,No,Millennial,6,Anger,Gen Z,Disgust,4,4,No Match
+INST_000449,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,4,4,Match
+INST_000450,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,4,3,Match
+INST_000451,Anger,😠,No,Millennial,6,Anger,Millennial,Sadness,5,5,No Match
+INST_000452,Anger,😠,No,Millennial,6,Anger,Millennial,Anger,5,5,Match
+INST_000453,Anger,😠,No,Millennial,6,Anger,Millennial,Other: Curious,3,5,No Match
+INST_000454,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,2,Match
+INST_000455,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,3,Match
+INST_000456,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,1,1,Match
+INST_000457,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,3,3,Match
+INST_000458,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,4,2,Match
+INST_000459,Anger,😠,No,Millennial,6,Anger,Gen Z,Anger,2,2,Match
+INST_000460,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,,4,4,
+INST_000461,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,,3,2,
+INST_000462,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,,4,4,
+INST_000463,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,4,No Match
+INST_000464,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,5,4,No Match
+INST_000465,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,3,2,Match
+INST_000466,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,2,1,No Match
+INST_000467,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000468,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,4,4,Match
+INST_000469,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000470,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,2,No Match
+INST_000471,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,2,1,Match
+INST_000472,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,3,3,No Match
+INST_000473,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,3,2,No Match
+INST_000474,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,2,2,Match
+INST_000475,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,3,2,Match
+INST_000476,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,5,2,Match
+INST_000477,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Disgust,4,3,No Match
+INST_000478,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Disgust,3,3,No Match
+INST_000479,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000480,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,5,4,No Match
+INST_000481,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000482,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,4,2,Match
+INST_000483,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,4,4,No Match
+INST_000484,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,3,3,No Match
+INST_000485,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000486,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Surprised,5,3,No Match
+INST_000487,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Disgust,4,4,No Match
+INST_000488,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Shock,3,4,Match
+INST_000489,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,4,2,No Match
+INST_000490,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Dumbfounded,2,1,No Match
+INST_000491,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Shock,4,2,Match
+INST_000492,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Shock,3,1,Match
+INST_000493,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Surprised,5,4,No Match
+INST_000494,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000495,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Shock,5,1,Match
+INST_000496,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000497,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,5,3,No Match
+INST_000498,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: Shock,2,2,Match
+INST_000499,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,5,5,Match
+INST_000500,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Other: surprise,4,4,No Match
+INST_000501,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,4,3,No Match
+INST_000502,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,4,4,No Match
+INST_000503,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000504,Anger,😱,No,Gen Z,13,Other: Shock,Millennial,Fear,4,5,No Match
+INST_000505,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,2,2,Match
+INST_000506,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Surprised,4,3,No Match
+INST_000507,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000508,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: Shock,1,2,Match
+INST_000509,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Other: surprise,3,1,No Match
+INST_000510,Anger,😱,No,Gen Z,13,Other: Shock,Gen Z,Fear,4,2,No Match
+INST_000511,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,,4,4,
+INST_000512,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,,3,2,
+INST_000513,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,,4,4,
+INST_000514,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,4,No Match
+INST_000515,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,5,4,No Match
+INST_000516,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,3,2,Match
+INST_000517,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,2,1,No Match
+INST_000518,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000519,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,4,4,Match
+INST_000520,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000521,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,2,No Match
+INST_000522,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,2,1,Match
+INST_000523,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,3,3,No Match
+INST_000524,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,3,2,No Match
+INST_000525,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,2,2,Match
+INST_000526,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,3,2,Match
+INST_000527,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,5,2,Match
+INST_000528,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Disgust,4,3,No Match
+INST_000529,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Disgust,3,3,No Match
+INST_000530,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000531,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,5,4,No Match
+INST_000532,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000533,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,4,2,Match
+INST_000534,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,4,4,No Match
+INST_000535,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,3,3,No Match
+INST_000536,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000537,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Surprised,5,3,No Match
+INST_000538,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Disgust,4,4,No Match
+INST_000539,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Shock,3,4,Match
+INST_000540,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,4,2,No Match
+INST_000541,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Dumbfounded,2,1,No Match
+INST_000542,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Shock,4,2,Match
+INST_000543,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Shock,3,1,Match
+INST_000544,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Surprised,5,4,No Match
+INST_000545,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000546,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Shock,5,1,Match
+INST_000547,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,3,No Match
+INST_000548,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,5,3,No Match
+INST_000549,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: Shock,2,2,Match
+INST_000550,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,5,5,Match
+INST_000551,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Other: surprise,4,4,No Match
+INST_000552,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,4,3,No Match
+INST_000553,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,4,4,No Match
+INST_000554,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,5,5,No Match
+INST_000555,Anger,😱,No,Millennial,6,Other: Shock,Millennial,Fear,4,5,No Match
+INST_000556,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,2,2,Match
+INST_000557,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Surprised,4,3,No Match
+INST_000558,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,3,3,Match
+INST_000559,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: Shock,1,2,Match
+INST_000560,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Other: surprise,3,1,No Match
+INST_000561,Anger,😱,No,Millennial,6,Other: Shock,Gen Z,Fear,4,2,No Match
+INST_000562,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,5,5,No Match
+INST_000563,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,3,4,No Match
+INST_000564,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,5,5,No Match
+INST_000565,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,2,5,No Match
+INST_000566,Anger,,Yes,Gen Z,15,Anger,Gen Z,Fear,5,5,No Match
+INST_000567,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Sympathy,5,5,No Match
+INST_000568,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,3,4,No Match
+INST_000569,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,3,5,No Match
+INST_000570,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,4,4,No Match
+INST_000571,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,4,4,No Match
+INST_000572,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,2,5,No Match
+INST_000573,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,5,5,No Match
+INST_000574,Anger,,Yes,Gen Z,15,Anger,Gen Z,Fear,5,5,No Match
+INST_000575,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Care,4,4,No Match
+INST_000576,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,4,3,No Match
+INST_000577,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,5,5,No Match
+INST_000578,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,5,5,No Match
+INST_000579,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,5,3,No Match
+INST_000580,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: Professional,4,4,No Match
+INST_000581,Anger,,Yes,Gen Z,15,Anger,Gen Z,"Other: flat formal declarative feeling, and curious",5,5,No Match
+INST_000582,Anger,,Yes,Gen Z,15,Anger,Millennial,Disgust,4,3,No Match
+INST_000583,Anger,,Yes,Gen Z,15,Anger,Millennial,Fear,3,3,No Match
+INST_000584,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,5,5,No Match
+INST_000585,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: No reaction,3,3,No Match
+INST_000586,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,2,4,No Match
+INST_000587,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: na,5,5,No Match
+INST_000588,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,3,5,No Match
+INST_000589,Anger,,Yes,Gen Z,15,Anger,Millennial,Disgust,4,4,No Match
+INST_000590,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,5,5,No Match
+INST_000591,Anger,,Yes,Gen Z,15,Anger,Millennial,Fear,5,5,No Match
+INST_000592,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Neutral,5,5,No Match
+INST_000593,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: Curiosity,4,5,No Match
+INST_000594,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,4,5,No Match
+INST_000595,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: Surprised,5,5,No Match
+INST_000596,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Monotonous,3,5,No Match
+INST_000597,Anger,,Yes,Gen Z,15,Anger,Millennial,Other: Formal,5,5,No Match
+INST_000598,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,3,5,No Match
+INST_000599,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Seriousness,5,5,No Match
+INST_000600,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,3,3,No Match
+INST_000601,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Curious,4,5,No Match
+INST_000602,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,3,3,No Match
+INST_000603,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,4,3,No Match
+INST_000604,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,4,5,No Match
+INST_000605,Anger,,Yes,Gen Z,15,Anger,Millennial,Disgust,5,5,No Match
+INST_000606,Anger,,Yes,Gen Z,15,Anger,Millennial,Sadness,4,5,No Match
+INST_000607,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Concern,5,4,No Match
+INST_000608,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Indifference,3,5,No Match
+INST_000609,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,5,5,No Match
+INST_000610,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,4,4,No Match
+INST_000611,Anger,,Yes,Gen Z,15,Anger,Gen Z,Sadness,4,4,No Match
+INST_000612,Anger,,Yes,Gen Z,15,Anger,Gen Z,Other: Apologetic,5,5,No Match
+INST_000613,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,5,5,No Match
+INST_000614,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,3,4,No Match
+INST_000615,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000616,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,2,5,Match
+INST_000617,Anger,,Yes,Millennial,8,Sadness,Gen Z,Fear,5,5,No Match
+INST_000618,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Sympathy,5,5,No Match
+INST_000619,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,3,4,No Match
+INST_000620,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,3,5,Match
+INST_000621,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000622,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,4,4,No Match
+INST_000623,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,2,5,Match
+INST_000624,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000625,Anger,,Yes,Millennial,8,Sadness,Gen Z,Fear,5,5,No Match
+INST_000626,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Care,4,4,No Match
+INST_000627,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,4,3,No Match
+INST_000628,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,5,5,No Match
+INST_000629,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000630,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,5,3,Match
+INST_000631,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: Professional,4,4,No Match
+INST_000632,Anger,,Yes,Millennial,8,Sadness,Gen Z,"Other: flat formal declarative feeling, and curious",5,5,No Match
+INST_000633,Anger,,Yes,Millennial,8,Sadness,Millennial,Disgust,4,3,No Match
+INST_000634,Anger,,Yes,Millennial,8,Sadness,Millennial,Fear,3,3,No Match
+INST_000635,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000636,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: No reaction,3,3,No Match
+INST_000637,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,2,4,Match
+INST_000638,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: na,5,5,No Match
+INST_000639,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,3,5,Match
+INST_000640,Anger,,Yes,Millennial,8,Sadness,Millennial,Disgust,4,4,No Match
+INST_000641,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,5,5,Match
+INST_000642,Anger,,Yes,Millennial,8,Sadness,Millennial,Fear,5,5,No Match
+INST_000643,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Neutral,5,5,No Match
+INST_000644,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: Curiosity,4,5,No Match
+INST_000645,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,4,5,Match
+INST_000646,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: Surprised,5,5,No Match
+INST_000647,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Monotonous,3,5,No Match
+INST_000648,Anger,,Yes,Millennial,8,Sadness,Millennial,Other: Formal,5,5,No Match
+INST_000649,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,3,5,Match
+INST_000650,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Seriousness,5,5,No Match
+INST_000651,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,3,3,Match
+INST_000652,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Curious,4,5,No Match
+INST_000653,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,3,3,Match
+INST_000654,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,4,3,Match
+INST_000655,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,4,5,Match
+INST_000656,Anger,,Yes,Millennial,8,Sadness,Millennial,Disgust,5,5,No Match
+INST_000657,Anger,,Yes,Millennial,8,Sadness,Millennial,Sadness,4,5,Match
+INST_000658,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Concern,5,4,No Match
+INST_000659,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Indifference,3,5,No Match
+INST_000660,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,5,5,Match
+INST_000661,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000662,Anger,,Yes,Millennial,8,Sadness,Gen Z,Sadness,4,4,Match
+INST_000663,Anger,,Yes,Millennial,8,Sadness,Gen Z,Other: Apologetic,5,5,No Match
+INST_000664,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Unserious,1,1,No Match
+INST_000665,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,2,2,Match
+INST_000666,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Worry,4,3,No Match
+INST_000667,Fear,😰,No,Gen Z,24,Fear,Gen Z,Sadness,2,1,No Match
+INST_000668,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,3,Match
+INST_000669,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,2,Match
+INST_000670,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Worry,2,1,No Match
+INST_000671,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,3,Match
+INST_000672,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Comforting,4,4,No Match
+INST_000673,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,4,Match
+INST_000674,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,2,Match
+INST_000675,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,1,1,Match
+INST_000676,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,4,Match
+INST_000677,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,2,Match
+INST_000678,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,2,2,Match
+INST_000679,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,3,Match
+INST_000680,Fear,😰,No,Gen Z,24,Fear,Gen Z,Sadness,5,3,No Match
+INST_000681,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,4,4,Match
+INST_000682,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,3,3,Match
+INST_000683,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,5,1,Match
+INST_000684,Fear,😰,No,Gen Z,24,Fear,Millennial,Disgust,3,3,No Match
+INST_000685,Fear,😰,No,Gen Z,24,Fear,Millennial,Disgust,5,5,No Match
+INST_000686,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,2,Match
+INST_000687,Fear,😰,No,Gen Z,24,Fear,Millennial,Disgust,3,3,No Match
+INST_000688,Fear,😰,No,Gen Z,24,Fear,Millennial,Sadness,2,2,No Match
+INST_000689,Fear,😰,No,Gen Z,24,Fear,Millennial,Other: Nervousness,5,5,No Match
+INST_000690,Fear,😰,No,Gen Z,24,Fear,Millennial,Other: Anxious,5,4,No Match
+INST_000691,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,4,4,Match
+INST_000692,Fear,😰,No,Gen Z,24,Fear,Millennial,Sadness,4,4,No Match
+INST_000693,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,5,4,Match
+INST_000694,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,1,1,Match
+INST_000695,Fear,😰,No,Gen Z,24,Fear,Millennial,Other: Worry,2,1,No Match
+INST_000696,Fear,😰,No,Gen Z,24,Fear,Millennial,Other: Concern,3,1,No Match
+INST_000697,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,4,3,Match
+INST_000698,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Helpless,3,3,No Match
+INST_000699,Fear,😰,No,Gen Z,24,Fear,Millennial,Other: Nervousness,5,1,No Match
+INST_000700,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,3,Match
+INST_000701,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Stressed,4,2,No Match
+INST_000702,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,3,3,Match
+INST_000703,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Supportive/Validating,5,3,No Match
+INST_000704,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,5,5,Match
+INST_000705,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,4,3,Match
+INST_000706,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,4,4,Match
+INST_000707,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,5,5,Match
+INST_000708,Fear,😰,No,Gen Z,24,Fear,Millennial,Fear,5,5,Match
+INST_000709,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,5,Match
+INST_000710,Fear,😰,No,Gen Z,24,Fear,Gen Z,Other: Worry,4,3,No Match
+INST_000711,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,2,1,Match
+INST_000712,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,3,3,Match
+INST_000713,Fear,😰,No,Gen Z,24,Fear,Gen Z,Sadness,4,4,No Match
+INST_000714,Fear,😰,No,Gen Z,24,Fear,Gen Z,Fear,4,2,Match
+INST_000715,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Unserious,1,1,No Match
+INST_000716,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,2,2,Match
+INST_000717,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Worry,4,3,No Match
+INST_000718,Fear,😰,No,Millennial,9,Fear,Gen Z,Sadness,2,1,No Match
+INST_000719,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,3,Match
+INST_000720,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,2,Match
+INST_000721,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Worry,2,1,No Match
+INST_000722,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,3,Match
+INST_000723,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Comforting,4,4,No Match
+INST_000724,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,4,Match
+INST_000725,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,2,Match
+INST_000726,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,1,1,Match
+INST_000727,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,4,Match
+INST_000728,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,2,Match
+INST_000729,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,2,2,Match
+INST_000730,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,3,Match
+INST_000731,Fear,😰,No,Millennial,9,Fear,Gen Z,Sadness,5,3,No Match
+INST_000732,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,4,4,Match
+INST_000733,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,3,3,Match
+INST_000734,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,5,1,Match
+INST_000735,Fear,😰,No,Millennial,9,Fear,Millennial,Disgust,3,3,No Match
+INST_000736,Fear,😰,No,Millennial,9,Fear,Millennial,Disgust,5,5,No Match
+INST_000737,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,2,Match
+INST_000738,Fear,😰,No,Millennial,9,Fear,Millennial,Disgust,3,3,No Match
+INST_000739,Fear,😰,No,Millennial,9,Fear,Millennial,Sadness,2,2,No Match
+INST_000740,Fear,😰,No,Millennial,9,Fear,Millennial,Other: Nervousness,5,5,No Match
+INST_000741,Fear,😰,No,Millennial,9,Fear,Millennial,Other: Anxious,5,4,No Match
+INST_000742,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,4,4,Match
+INST_000743,Fear,😰,No,Millennial,9,Fear,Millennial,Sadness,4,4,No Match
+INST_000744,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,5,4,Match
+INST_000745,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,1,1,Match
+INST_000746,Fear,😰,No,Millennial,9,Fear,Millennial,Other: Worry,2,1,No Match
+INST_000747,Fear,😰,No,Millennial,9,Fear,Millennial,Other: Concern,3,1,No Match
+INST_000748,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,4,3,Match
+INST_000749,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Helpless,3,3,No Match
+INST_000750,Fear,😰,No,Millennial,9,Fear,Millennial,Other: Nervousness,5,1,No Match
+INST_000751,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,3,Match
+INST_000752,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Stressed,4,2,No Match
+INST_000753,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,3,3,Match
+INST_000754,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Supportive/Validating,5,3,No Match
+INST_000755,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,5,5,Match
+INST_000756,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,4,3,Match
+INST_000757,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,4,4,Match
+INST_000758,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,5,5,Match
+INST_000759,Fear,😰,No,Millennial,9,Fear,Millennial,Fear,5,5,Match
+INST_000760,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,5,Match
+INST_000761,Fear,😰,No,Millennial,9,Fear,Gen Z,Other: Worry,4,3,No Match
+INST_000762,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,2,1,Match
+INST_000763,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,3,3,Match
+INST_000764,Fear,😰,No,Millennial,9,Fear,Gen Z,Sadness,4,4,No Match
+INST_000765,Fear,😰,No,Millennial,9,Fear,Gen Z,Fear,4,2,Match
+INST_000766,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Judgemental,1,1,No Match
+INST_000767,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,1,3,Match
+INST_000768,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Worry but not as much as the milennial one,3,2,No Match
+INST_000769,Fear,😬,No,Gen Z,16,Fear,Gen Z,Disgust,1,1,No Match
+INST_000770,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Nervousness,2,2,No Match
+INST_000771,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Uneasiness,4,4,No Match
+INST_000772,Fear,😬,No,Gen Z,16,Fear,Gen Z,Disgust,1,1,No Match
+INST_000773,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,3,2,Match
+INST_000774,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Hopeful,3,3,No Match
+INST_000775,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: awkward,4,4,No Match
+INST_000776,Fear,😬,No,Gen Z,16,Fear,Gen Z,Disgust,4,2,No Match
+INST_000777,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Not sure,1,1,No Match
+INST_000778,Fear,😬,No,Gen Z,16,Fear,Gen Z,Disgust,2,2,No Match
+INST_000779,Fear,😬,No,Gen Z,16,Fear,Gen Z,Disgust,3,2,No Match
+INST_000780,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,2,2,Match
+INST_000781,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Skeptical,3,4,No Match
+INST_000782,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Encouraging,5,4,No Match
+INST_000783,Fear,😬,No,Gen Z,16,Fear,Millennial,Happiness,2,1,No Match
+INST_000784,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,2,2,Match
+INST_000785,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,2,1,Match
+INST_000786,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,4,3,Match
+INST_000787,Fear,😬,No,Gen Z,16,Fear,Millennial,Disgust,4,4,No Match
+INST_000788,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,4,4,Match
+INST_000789,Fear,😬,No,Gen Z,16,Fear,Millennial,Disgust,3,3,No Match
+INST_000790,Fear,😬,No,Gen Z,16,Fear,Millennial,Sadness,2,2,No Match
+INST_000791,Fear,😬,No,Gen Z,16,Fear,Millennial,Other: grimacing face,5,5,No Match
+INST_000792,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,4,3,Match
+INST_000793,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,4,4,Match
+INST_000794,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,4,4,Match
+INST_000795,Fear,😬,No,Gen Z,16,Fear,Millennial,Happiness,5,3,No Match
+INST_000796,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,1,1,Match
+INST_000797,Fear,😬,No,Gen Z,16,Fear,Millennial,Other: Helplessness,2,1,No Match
+INST_000798,Fear,😬,No,Gen Z,16,Fear,Millennial,Other: Bad but unsure how to react,3,1,No Match
+INST_000799,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,3,3,Match
+INST_000800,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Innocent,3,3,No Match
+INST_000801,Fear,😬,No,Gen Z,16,Fear,Millennial,Other: Unsure,1,1,No Match
+INST_000802,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,3,3,Match
+INST_000803,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Awkward,4,3,No Match
+INST_000804,Fear,😬,No,Gen Z,16,Fear,Millennial,Anger,2,2,No Match
+INST_000805,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Hopeful,3,1,No Match
+INST_000806,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,3,3,Match
+INST_000807,Fear,😬,No,Gen Z,16,Fear,Millennial,Happiness,4,3,No Match
+INST_000808,Fear,😬,No,Gen Z,16,Fear,Millennial,Fear,5,3,Match
+INST_000809,Fear,😬,No,Gen Z,16,Fear,Millennial,Happiness,5,4,No Match
+INST_000810,Fear,😬,No,Gen Z,16,Fear,Millennial,Other: Begging,5,4,No Match
+INST_000811,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Sarcasm,1,1,No Match
+INST_000812,Fear,😬,No,Gen Z,16,Fear,Gen Z,Happiness,3,3,No Match
+INST_000813,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Awkwardness,1,1,No Match
+INST_000814,Fear,😬,No,Gen Z,16,Fear,Gen Z,Other: Awkwardness,3,3,No Match
+INST_000815,Fear,😬,No,Gen Z,16,Fear,Gen Z,Sadness,3,3,No Match
+INST_000816,Fear,😬,No,Gen Z,16,Fear,Gen Z,Fear,4,3,Match
+INST_000817,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Confusion,1,1,No Match
+INST_000818,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,1,2,Match
+INST_000819,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: ????? I honestly don't know. Maybe relatable?,2,1,No Match
+INST_000820,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,1,1,Match
+INST_000821,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Awkward,2,2,No Match
+INST_000822,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Surprise,3,2,No Match
+INST_000823,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Silly,1,1,No Match
+INST_000824,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,2,2,Match
+INST_000825,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Nervousness,4,4,No Match
+INST_000826,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,3,3,No Match
+INST_000827,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Embarrassment,5,2,No Match
+INST_000828,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Not sure,1,1,No Match
+INST_000829,Fear,😳,No,Millennial,5,Fear,Gen Z,Happiness,1,3,No Match
+INST_000830,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Concern,3,3,No Match
+INST_000831,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,2,1,No Match
+INST_000832,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Commanding,4,4,No Match
+INST_000833,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Concern,5,4,No Match
+INST_000834,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Disappointment,5,3,No Match
+INST_000835,Fear,😳,No,Millennial,5,Fear,Millennial,Fear,1,1,Match
+INST_000836,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,3,2,Match
+INST_000837,Fear,😳,No,Millennial,5,Fear,Millennial,Disgust,3,4,No Match
+INST_000838,Fear,😳,No,Millennial,5,Fear,Millennial,Disgust,4,4,No Match
+INST_000839,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,4,2,Match
+INST_000840,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Shock,3,3,No Match
+INST_000841,Fear,😳,No,Millennial,5,Fear,Millennial,Disgust,4,4,No Match
+INST_000842,Fear,😳,No,Millennial,5,Fear,Millennial,Other: surprised,5,5,No Match
+INST_000843,Fear,😳,No,Millennial,5,Fear,Millennial,Happiness,4,3,No Match
+INST_000844,Fear,😳,No,Millennial,5,Fear,Millennial,Other: confuse,4,4,No Match
+INST_000845,Fear,😳,No,Millennial,5,Fear,Millennial,Sadness,4,4,No Match
+INST_000846,Fear,😳,No,Millennial,5,Fear,Millennial,Fear,2,3,Match
+INST_000847,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,1,1,No Match
+INST_000848,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Shock,2,1,No Match
+INST_000849,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Surprised,3,1,No Match
+INST_000850,Fear,😳,No,Millennial,5,Fear,Millennial,Fear,3,3,Match
+INST_000851,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Hopeful,2,2,No Match
+INST_000852,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Shock,1,1,No Match
+INST_000853,Fear,😳,No,Millennial,5,Fear,Gen Z,Fear,3,3,Match
+INST_000854,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,4,3,No Match
+INST_000855,Fear,😳,No,Millennial,5,Fear,Millennial,Other: Concern,4,4,No Match
+INST_000856,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: --,1,1,No Match
+INST_000857,Fear,😳,No,Millennial,5,Fear,Millennial,Fear,3,3,Match
+INST_000858,Fear,😳,No,Millennial,5,Fear,Millennial,Sadness,4,3,No Match
+INST_000859,Fear,😳,No,Millennial,5,Fear,Millennial,Fear,5,5,Match
+INST_000860,Fear,😳,No,Millennial,5,Fear,Millennial,Sadness,5,5,No Match
+INST_000861,Fear,😳,No,Millennial,5,Fear,Millennial,Anger,4,4,No Match
+INST_000862,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Sarcasm,1,2,No Match
+INST_000863,Fear,😳,No,Millennial,5,Fear,Gen Z,Happiness,4,4,No Match
+INST_000864,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,2,1,No Match
+INST_000865,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Uncertainty,3,2,No Match
+INST_000866,Fear,😳,No,Millennial,5,Fear,Gen Z,Sadness,3,3,No Match
+INST_000867,Fear,😳,No,Millennial,5,Fear,Gen Z,Other: Shock,3,2,No Match
+INST_000868,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Judgemental,1,1,No Match
+INST_000869,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: idk,2,3,No Match
+INST_000870,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Condescending,2,2,No Match
+INST_000871,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,3,1,Match
+INST_000872,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,2,2,No Match
+INST_000873,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000874,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,1,1,Match
+INST_000875,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,3,2,No Match
+INST_000876,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,2,2,No Match
+INST_000877,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: annoyed,3,3,No Match
+INST_000878,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Embarrassment,5,2,No Match
+INST_000879,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000880,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,3,4,Match
+INST_000881,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,2,3,No Match
+INST_000882,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Sadness,2,2,No Match
+INST_000883,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,4,3,No Match
+INST_000884,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,4,2,No Match
+INST_000885,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Happiness,2,3,No Match
+INST_000886,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,1,1,Match
+INST_000887,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,"Other: flat, declarative only statement",2,1,No Match
+INST_000888,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,4,3,Match
+INST_000889,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,5,5,Match
+INST_000890,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Anger,4,2,No Match
+INST_000891,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Disappointment,3,3,No Match
+INST_000892,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Fear,4,4,No Match
+INST_000893,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Disappointment,5,5,No Match
+INST_000894,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,4,3,Match
+INST_000895,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,4,4,Match
+INST_000896,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,3,2,Match
+INST_000897,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Anger,5,5,No Match
+INST_000898,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000899,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Tired (of explaining or reassuring),4,2,No Match
+INST_000900,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Disappointment,3,1,No Match
+INST_000901,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Disappointment,3,2,No Match
+INST_000902,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Dejected,3,3,No Match
+INST_000903,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Other: Annoyed,4,3,No Match
+INST_000904,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Sadness,3,3,No Match
+INST_000905,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Annoyed,2,1,No Match
+INST_000906,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,3,3,Match
+INST_000907,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,4,3,No Match
+INST_000908,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,3,3,Match
+INST_000909,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,4,3,Match
+INST_000910,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,5,5,Match
+INST_000911,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Sadness,5,5,No Match
+INST_000912,Disgust,🤦,No,Gen Z,33,Disgust,Millennial,Disgust,5,3,Match
+INST_000913,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,1,1,Match
+INST_000914,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,4,2,Match
+INST_000915,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Exasperated,1,1,No Match
+INST_000916,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Other: Disappointment,3,1,No Match
+INST_000917,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Anger,4,3,No Match
+INST_000918,Disgust,🤦,No,Gen Z,33,Disgust,Gen Z,Disgust,3,2,Match
+INST_000919,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Judgemental,1,1,No Match
+INST_000920,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: idk,2,3,No Match
+INST_000921,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Condescending,2,2,No Match
+INST_000922,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,3,1,Match
+INST_000923,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,2,2,No Match
+INST_000924,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000925,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,1,1,Match
+INST_000926,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,3,2,No Match
+INST_000927,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,2,2,No Match
+INST_000928,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: annoyed,3,3,No Match
+INST_000929,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Embarrassment,5,2,No Match
+INST_000930,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000931,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,3,4,Match
+INST_000932,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,2,3,No Match
+INST_000933,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Sadness,2,2,No Match
+INST_000934,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,4,3,No Match
+INST_000935,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,4,2,No Match
+INST_000936,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Happiness,2,3,No Match
+INST_000937,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,1,1,Match
+INST_000938,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,"Other: flat, declarative only statement",2,1,No Match
+INST_000939,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,4,3,Match
+INST_000940,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,5,5,Match
+INST_000941,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Anger,4,2,No Match
+INST_000942,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Disappointment,3,3,No Match
+INST_000943,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Fear,4,4,No Match
+INST_000944,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Disappointment,5,5,No Match
+INST_000945,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,4,3,Match
+INST_000946,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,4,4,Match
+INST_000947,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,3,2,Match
+INST_000948,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Anger,5,5,No Match
+INST_000949,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,1,1,No Match
+INST_000950,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Tired (of explaining or reassuring),4,2,No Match
+INST_000951,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Disappointment,3,1,No Match
+INST_000952,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Disappointment,3,2,No Match
+INST_000953,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Dejected,3,3,No Match
+INST_000954,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Other: Annoyed,4,3,No Match
+INST_000955,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Sadness,3,3,No Match
+INST_000956,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Annoyed,2,1,No Match
+INST_000957,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,3,3,Match
+INST_000958,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,4,3,No Match
+INST_000959,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,3,3,Match
+INST_000960,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,4,3,Match
+INST_000961,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,5,5,Match
+INST_000962,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Sadness,5,5,No Match
+INST_000963,Disgust,🤦,No,Millennial,22,Disgust,Millennial,Disgust,5,3,Match
+INST_000964,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,1,1,Match
+INST_000965,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,4,2,Match
+INST_000966,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Exasperated,1,1,No Match
+INST_000967,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Other: Disappointment,3,1,No Match
+INST_000968,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Anger,4,3,No Match
+INST_000969,Disgust,🤦,No,Millennial,22,Disgust,Gen Z,Disgust,3,2,Match
+INST_000970,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Unserious,1,1,No Match
+INST_000971,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,2,2,No Match
+INST_000972,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Worry,5,2,No Match
+INST_000973,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,2,1,No Match
+INST_000974,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Anger,3,4,No Match
+INST_000975,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Distress,4,3,No Match
+INST_000976,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Sadness,1,1,No Match
+INST_000977,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,2,2,Match
+INST_000978,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Hopeful,4,4,No Match
+INST_000979,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: frustrated,3,3,No Match
+INST_000980,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,4,2,No Match
+INST_000981,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Unease,1,1,No Match
+INST_000982,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,4,3,No Match
+INST_000983,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,3,3,No Match
+INST_000984,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,2,2,No Match
+INST_000985,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Sadness,3,2,No Match
+INST_000986,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,4,2,Match
+INST_000987,Disgust,😖,No,Millennial,2,Disgust,Millennial,Anger,4,1,No Match
+INST_000988,Disgust,😖,No,Millennial,2,Disgust,Millennial,Fear,2,2,No Match
+INST_000989,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Fear,2,1,No Match
+INST_000990,Disgust,😖,No,Millennial,2,Disgust,Millennial,Anger,5,4,No Match
+INST_000991,Disgust,😖,No,Millennial,2,Disgust,Millennial,Anger,5,5,No Match
+INST_000992,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,4,2,Match
+INST_000993,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,3,3,Match
+INST_000994,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,4,4,Match
+INST_000995,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,5,5,Match
+INST_000996,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,4,2,Match
+INST_000997,Disgust,😖,No,Millennial,2,Disgust,Millennial,Anger,4,4,No Match
+INST_000998,Disgust,😖,No,Millennial,2,Disgust,Millennial,Sadness,3,3,No Match
+INST_000999,Disgust,😖,No,Millennial,2,Disgust,Millennial,Sadness,2,2,No Match
+INST_001000,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,1,1,Match
+INST_001001,Disgust,😖,No,Millennial,2,Disgust,Millennial,Other: Worry,3,2,No Match
+INST_001002,Disgust,😖,No,Millennial,2,Disgust,Millennial,Sadness,3,1,No Match
+INST_001003,Disgust,😖,No,Millennial,2,Disgust,Millennial,Other: Can’t explain,2,3,No Match
+INST_001004,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Not giving,3,3,No Match
+INST_001005,Disgust,😖,No,Millennial,2,Disgust,Millennial,Other: exasperated,4,1,No Match
+INST_001006,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Sadness,4,3,No Match
+INST_001007,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,3,3,Match
+INST_001008,Disgust,😖,No,Millennial,2,Disgust,Millennial,Anger,1,1,No Match
+INST_001009,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,3,2,Match
+INST_001010,Disgust,😖,No,Millennial,2,Disgust,Millennial,Fear,3,3,No Match
+INST_001011,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,4,3,Match
+INST_001012,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,5,5,Match
+INST_001013,Disgust,😖,No,Millennial,2,Disgust,Millennial,Fear,5,5,No Match
+INST_001014,Disgust,😖,No,Millennial,2,Disgust,Millennial,Disgust,5,3,Match
+INST_001015,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,1,1,Match
+INST_001016,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Anger,4,4,No Match
+INST_001017,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Sadness,3,1,No Match
+INST_001018,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Other: Disapproval,3,1,No Match
+INST_001019,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,3,1,Match
+INST_001020,Disgust,😖,No,Millennial,2,Disgust,Gen Z,Disgust,2,2,Match
+INST_001021,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Comforting,4,4,No Match
+INST_001022,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Fear,3,2,No Match
+INST_001023,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Relating,4,2,No Match
+INST_001024,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,2,1,No Match
+INST_001025,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,5,No Match
+INST_001026,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Overwhelmed,4,3,No Match
+INST_001027,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,1,1,No Match
+INST_001028,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,2,2,No Match
+INST_001029,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Concern,4,4,No Match
+INST_001030,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,4,3,No Match
+INST_001031,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Fear,5,1,No Match
+INST_001032,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,2,1,No Match
+INST_001033,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,4,3,No Match
+INST_001034,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: mockery,2,2,No Match
+INST_001035,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Fear,2,2,No Match
+INST_001036,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,2,No Match
+INST_001037,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,4,3,No Match
+INST_001038,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: Micking,1,1,No Match
+INST_001039,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Fear,2,2,No Match
+INST_001040,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,2,1,No Match
+INST_001041,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,2,3,No Match
+INST_001042,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,4,4,No Match
+INST_001043,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Fear,4,3,No Match
+INST_001044,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: Lonely,4,4,No Match
+INST_001045,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Disgust,4,4,No Match
+INST_001046,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: crying,5,5,No Match
+INST_001047,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,5,3,No Match
+INST_001048,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,5,5,No Match
+INST_001049,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,3,3,No Match
+INST_001050,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,4,2,No Match
+INST_001051,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,1,1,No Match
+INST_001052,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: Panic,3,2,No Match
+INST_001053,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,3,1,No Match
+INST_001054,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: Overreacting,2,3,No Match
+INST_001055,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Dejected on a higher level,3,3,No Match
+INST_001056,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Other: up to limits,4,1,No Match
+INST_001057,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,5,3,No Match
+INST_001058,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Reassuring,5,4,No Match
+INST_001059,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,4,3,No Match
+INST_001060,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,4,3,No Match
+INST_001061,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,4,4,No Match
+INST_001062,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,4,3,No Match
+INST_001063,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Happiness,5,5,Match
+INST_001064,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Sadness,5,5,No Match
+INST_001065,Disgust,😭,No,Gen Z,34,Happiness,Millennial,Disgust,5,3,No Match
+INST_001066,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Weirded Out,3,2,No Match
+INST_001067,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,3,No Match
+INST_001068,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,1,No Match
+INST_001069,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Other: Playfulness,3,1,No Match
+INST_001070,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,1,No Match
+INST_001071,Disgust,😭,No,Gen Z,34,Happiness,Gen Z,Sadness,3,2,No Match
+INST_001072,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Comforting,5,5,No Match
+INST_001073,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Concern,3,4,No Match
+INST_001074,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Reassuring,5,4,No Match
+INST_001075,Disgust,,Yes,Millennial,2,Fear,Gen Z,Happiness,2,5,No Match
+INST_001076,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Reassurance,5,5,No Match
+INST_001077,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Reassuring,5,5,No Match
+INST_001078,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Direct and forward,3,4,No Match
+INST_001079,Disgust,,Yes,Millennial,2,Fear,Gen Z,Happiness,4,5,No Match
+INST_001080,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Professionally comforting,4,4,No Match
+INST_001081,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: calm,4,5,No Match
+INST_001082,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Neutral,3,1,No Match
+INST_001083,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Calm,5,5,No Match
+INST_001084,Disgust,,Yes,Millennial,2,Fear,Gen Z,Fear,5,5,Match
+INST_001085,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: care,4,4,No Match
+INST_001086,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: optimistic,3,3,No Match
+INST_001087,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Supportive,5,5,No Match
+INST_001088,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Assurance,5,5,No Match
+INST_001089,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Professional tone,5,5,No Match
+INST_001090,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Professional,4,4,No Match
+INST_001091,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: confident,5,5,No Match
+INST_001092,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: neutral emotion,5,5,No Match
+INST_001093,Disgust,,Yes,Millennial,2,Fear,Millennial,Disgust,4,4,No Match
+INST_001094,Disgust,,Yes,Millennial,2,Fear,Gen Z,Fear,5,5,Match
+INST_001095,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: No emoji,2,2,No Match
+INST_001096,Disgust,,Yes,Millennial,2,Fear,Millennial,Disgust,4,4,No Match
+INST_001097,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: reassuring,5,5,No Match
+INST_001098,Disgust,,Yes,Millennial,2,Fear,Millennial,Sadness,3,3,No Match
+INST_001099,Disgust,,Yes,Millennial,2,Fear,Millennial,Sadness,4,4,No Match
+INST_001100,Disgust,,Yes,Millennial,2,Fear,Millennial,Sadness,5,5,No Match
+INST_001101,Disgust,,Yes,Millennial,2,Fear,Millennial,Sadness,5,5,No Match
+INST_001102,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Neutral,5,5,No Match
+INST_001103,Disgust,,Yes,Millennial,2,Fear,Millennial,"Other: Calm, composed",5,5,No Match
+INST_001104,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Assertive,3,4,No Match
+INST_001105,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Assuring,5,5,No Match
+INST_001106,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Calming,4,4,No Match
+INST_001107,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Disappointment,5,5,No Match
+INST_001108,Disgust,,Yes,Millennial,2,Fear,Gen Z,Anger,3,4,No Match
+INST_001109,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Seriousness,3,2,No Match
+INST_001110,Disgust,,Yes,Millennial,2,Fear,Millennial,Other: Concern,4,4,No Match
+INST_001111,Disgust,,Yes,Millennial,2,Fear,Gen Z,Other: Neutral,4,5,No Match
+INST_001112,Disgust,,Yes,Millennial,2,Fear,Millennial,Happiness,3,3,No Match
+INST_001113,Disgust,,Yes,Millennial,2,Fear,Millennial,Happiness,4,3,No Match
+INST_001114,Disgust,,Yes,Millennial,2,Fear,Millennial,Anger,5,5,No Match
+INST_001115,Disgust,,Yes,Millennial,2,Fear,Millennial,Happiness,5,5,No Match
+INST_001116,Disgust,,Yes,Millennial,2,Fear,Millennial,Sadness,5,4,No Match
+INST_001117,Disgust,,Yes,Millennial,2,Fear,Gen Z,Anger,4,4,No Match
+INST_001118,Disgust,,Yes,Millennial,2,Fear,Gen Z,Anger,4,4,No Match
+INST_001119,Disgust,,Yes,Millennial,2,Fear,Gen Z,Sadness,5,5,No Match
+INST_001120,Disgust,,Yes,Millennial,2,Fear,Gen Z,Anger,4,4,No Match
+INST_001121,Disgust,,Yes,Millennial,2,Fear,Gen Z,Anger,4,5,No Match
+INST_001122,Disgust,,Yes,Millennial,2,Fear,Gen Z,Disgust,5,5,No Match

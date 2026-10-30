@@ -41,7 +41,16 @@ export default function OnboardingModal({
               key={option.value}
               type="button"
               aria-pressed={selected === option.value}
-              onClick={() => setSelected(option.value)}
+              onClick={() => {
+                setSelected(option.value);
+                void fetch("/api/adaptive-chat/onboarding", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ generation: option.label }),
+                }).catch((error: unknown) => {
+                  console.error("[adaptive-chat][onboarding] Failed to send generation selection", error);
+                });
+              }}
               className={`rounded-md border px-3 py-3 text-left text-sm transition-colors ${
                 selected === option.value
                   ? "border-primary bg-secondary"

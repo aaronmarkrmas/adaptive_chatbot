@@ -6,7 +6,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import OnboardingModal from "@/components/OnboardingModal";
 
 const STORAGE_KEY = "chatbot:conversation:v1";
-const ONBOARDED_KEY = "chatbot:onboarded:v1"; 
+const ONBOARDED_KEY = "chatbot:onboarded:v1";
+const GENERATION_KEY = "chatbot:generation:v1";
 
 const STARTERS = [
   "Help me think through something",
@@ -43,13 +44,16 @@ export default function ChatPage() {
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
-      setOnboarded(window.sessionStorage.getItem(ONBOARDED_KEY) === "true");
+      setOnboarded(
+        window.sessionStorage.getItem(ONBOARDED_KEY) === "true" &&
+          Boolean(window.sessionStorage.getItem(GENERATION_KEY)),
+      );
     }, 0);
 
     return () => window.clearTimeout(timeoutId);
   }, []);
   const showOnboarding = onboarded === false;
-  const { messages, sendMessage, status, setMessages } = useChat({
+  const { messages, sendMessage, status, error, setMessages } = useChat({
     id: "chatbot-single-conversation",
     transport: new DefaultChatTransport({ api: "/api/adaptive-chat" }),
   });
@@ -85,7 +89,10 @@ export default function ChatPage() {
     (text: string) => {
       const trimmed = text.trim();
       if (!trimmed || isBusy) return;
-      void sendMessage({ text: trimmed });
+      void sendMessage(
+        { text: trimmed },
+        { body: { generation: window.sessionStorage.getItem(GENERATION_KEY) } },
+      );
       setInput("");
       requestAnimationFrame(() => focusInput());
     },
@@ -96,6 +103,8 @@ export default function ChatPage() {
     setMessages([]);
     window.localStorage.removeItem(STORAGE_KEY);
     window.sessionStorage.removeItem(ONBOARDED_KEY);
+    window.sessionStorage.removeItem(GENERATION_KEY);
+    setOnboarded(false);
     focusInput();
   };
 
@@ -105,8 +114,10 @@ export default function ChatPage() {
     <div className="flex min-h-screen items-center justify-center bg-background px-3 py-4 sm:px-6 sm:py-8">
       {showOnboarding && (
         <OnboardingModal
-          onComplete={() => {
+          onComplete={(group) => {
+            const generation = group === "genz" ? "Gen Z" : "Millennial";
             window.sessionStorage.setItem(ONBOARDED_KEY, "true");
+            window.sessionStorage.setItem(GENERATION_KEY, generation);
             setOnboarded(true);
           }}
         />
@@ -209,6 +220,11 @@ export default function ChatPage() {
 
             {status === "submitted" && (
               <p className="text-sm text-muted-foreground">Preparing a response…</p>
+            )}
+            {error && (
+              <div className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                The chatbot is offline. Please reload the page or try contacting the researchers.
+              </div>
             )}
           </div>
         </div>
