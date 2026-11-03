@@ -6,7 +6,6 @@ A single-conversation adaptive chatbot built with **Next.js (App Router)** and t
 
 - **Single conversation chat UI** with a warm, study-friendly palette.
 - **Token streaming** — Gemini replies appear as they are generated.
-- **Live "Thinking" box** — the model's chain-of-thought streams into a subtle, dashed panel above each answer.
 - **Session persistence** — the conversation is saved to `localStorage` and restored on reload ("New chat" clears it).
 - **Starter prompts** for quick conversation, plus keyboard controls (Enter to send, Shift+Enter for newline).
 - **Emoji adaptation** based on the user's onboarding generation and detected emotion.
@@ -61,10 +60,18 @@ src/
 ├── components/
 │   └── OnboardingModal.tsx   # Generation selection modal
 ├── lib/
-│   └── config.ts             # Gemini model and generation settings
-├── emojiFramework.ts         # CSV validation, rule lookup, rendering, and audit helpers
-├── integrationExample.ts     # Non-streaming integration reference
-├── library.csv               # Validated Phase 2 rule library
+│   ├── adaptive/
+│   │   ├── emotionDetector.ts # Gemini emotion pre-call and label normalization
+│   │   ├── guidanceService.ts # Rule lookup and guidance rendering
+│   │   ├── promptBuilder.ts   # Hidden system-prompt construction
+│   │   ├── responseAuditor.ts # Compliance and evidence auditing
+│   │   └── turnLogger.ts      # Request IDs, structured logs, offline message
+│   ├── library/
+│   │   ├── emojiFramework.ts  # CSV validation, lookup, rendering, and auditing
+│   │   ├── libraryLoader.ts   # Validated library loading and caching
+│   │   └── library.csv        # Validated Phase 2 rule library
+│   └── config.ts              # Gemini model and generation settings
+├── integrationExample.ts      # Non-streaming integration reference
 └── annotated_dataset.csv
 ```
 
@@ -230,5 +237,5 @@ Clicking **New chat** clears the saved conversation and onboarding session so th
 
 - **No reply appears / 400 in the Network tab** — the page calls `/api/adaptive-chat` and the route speaks the AI SDK wire protocol, not a plain `{ reply }` JSON. If you changed one side, keep both in sync.
 - **"Failed to generate response" (500)** — your `GEMINI_API_KEY` is missing, invalid, or the model is unavailable (you can try a newer model ID in `route.ts`).
-- **No "Thinking" box** — the featured model must be a reasoning-capable Gemini model, and `thinkingConfig.includeThoughts` must stay enabled in `route.ts`.
+- **No Thinking box** — thought output is intentionally disabled with `thinkingConfig.includeThoughts: false`; only the final response is displayed.
 - **Conversation does not persist** — storage only writes when the message list is non-empty; use the "New chat" button to clear.

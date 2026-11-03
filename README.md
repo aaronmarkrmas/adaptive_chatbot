@@ -4,7 +4,7 @@ This repository contains a Next.js chatbot powered by Google Gemini. Unlike a va
 
 1. The user's selected generation: `Gen Z` or `Millennial`.
 2. The emotion detected in the latest user message.
-3. Matching rules from `adaptive_chatbot/src/library.csv`.
+3. Matching rules from `adaptive_chatbot/src/lib/library/library.csv`.
 
 The matched recommendations are added to Gemini's hidden system prompt. The guidance is not shown as a separate message to the user.
 
@@ -70,10 +70,18 @@ adaptive_chatbot/
 │   ├── components/
 │   │   └── OnboardingModal.tsx         # Generation selection modal
 │   ├── lib/
+│   │   ├── adaptive/
+│   │   │   ├── emotionDetector.ts      # Gemini emotion pre-call and label normalization
+│   │   │   ├── guidanceService.ts      # Rule lookup and guidance rendering
+│   │   │   ├── promptBuilder.ts        # Hidden system-prompt construction
+│   │   │   ├── responseAuditor.ts      # Compliance and evidence auditing
+│   │   │   └── turnLogger.ts           # Request IDs, structured logs, offline message
+│   │   ├── library/
+│   │   │   ├── emojiFramework.ts       # CSV validation, lookup, rendering, auditing
+│   │   │   ├── libraryLoader.ts        # Validated library loading and caching
+│   │   │   └── library.csv             # Validated generation/emotion rules
 │   │   └── config.ts                   # Gemini model and generation settings
-│   ├── emojiFramework.ts                # CSV parser, validation, lookup, rendering, auditing
 │   ├── integrationExample.ts            # Non-streaming integration reference
-│   ├── library.csv                      # Validated generation/emotion rules
 │   └── annotated_dataset.csv
 └── ...
 ```

@@ -11,7 +11,7 @@
 import {
   buildSystemPrompt, checkCompliance, getGuidance, normalizeEmotion, renderGuidance, replyEvidence, toLog,
   type LibraryIndex,
-} from "./emojiFramework";
+} from "./lib/library/emojiFramework";
 
 /** Your existing Gemini call: (system prompt or null, user message) -> reply text. Use the SAME function (model, temperature) for both chatbots. */
 export type CallGemini = (systemPrompt: string | null, userMessage: string) => Promise<string>;

@@ -1,35 +1,17 @@
 import { createGoogle } from "@ai-sdk/google";
-import { convertToModelMessages, generateText, streamText } from "ai";
+import { convertToModelMessages, streamText } from "ai";
 import { NextRequest, NextResponse } from "next/server";
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { MODEL_NAME, BASE_PROMPT, GENERATION_SETTINGS, GOOGLE_OPTIONS } from "@/lib/config";
 import {
-  buildSystemPrompt,
-  checkCompliance,
-  getGuidance,
-  LibraryIndex,
-  normalizeEmotion,
-  replyEvidence,
-  renderGuidance,
-  rulesUsed,
-} from "@/emojiFramework";
+  detectEmotion,
+} from "@/lib/adaptive/emotionDetector";
+import { retrieveGuidance } from "@/lib/adaptive/guidanceService";
+import { buildSystemPrompt } from "@/lib/adaptive/promptBuilder";
+import { auditResponse } from "@/lib/adaptive/responseAuditor";
+import { createRequestId, logStep, OFFLINE_MESSAGE } from "@/lib/adaptive/turnLogger";
+import { getLibraryIndex } from "@/lib/library/libraryLoader";
 
 const google = createGoogle({ apiKey: process.env.GEMINI_API_KEY });
-let libraryIndex: LibraryIndex | null = null;
-const OFFLINE_MESSAGE = "The chatbot is offline. Please reload the page or try contacting the researchers.";
-
-function logStep(requestId: string, step: string, details: Record<string, unknown>) {
-  console.info(`[adaptive-chat][${requestId}] ${step}`, details);
-}
-
-function getLibraryIndex() {
-  if (!libraryIndex) {
-    const csvPath = path.join(process.cwd(), "src", "library.csv");
-    libraryIndex = LibraryIndex.fromCsvText(readFileSync(csvPath, "utf8"));
-  }
-  return libraryIndex;
-}
 
 function getLatestUserText(messages: unknown): string {
   if (!Array.isArray(messages)) return "";
@@ -58,23 +40,8 @@ function getLatestUserText(messages: unknown): string {
   return "";
 }
 
-async function detectEmotion(userMessage: string) {
-  const result = await generateText({
-    model: google(MODEL_NAME),
-    system:
-      "Classify the user's message into exactly one label: anger, disgust, fear, happiness, or sadness. " +
-      "Return the complete lowercase label, not an abbreviation, with nothing else." +
-      "If several emotions apply, choose the dominant emotion.",
-    prompt: userMessage,
-    temperature: 0,
-    maxOutputTokens: 16,
-  });
-
-  return { raw: result.text.trim(), normalized: normalizeEmotion(result.text) };
-}
-
 export async function POST(req: NextRequest) {
-  const requestId = crypto.randomUUID();
+  const requestId = createRequestId();
 
   try {
     const { messages, generation } = await req.json();
@@ -108,16 +75,15 @@ export async function POST(req: NextRequest) {
     });
 
     const index = getLibraryIndex();
-    const guidance = getGuidance(index, generation, emotion);
+    const { guidance, rules, guidanceText } = retrieveGuidance(index, generation, emotion);
     logStep(requestId, "3. Valid guidance rules selected", {
       generation: guidance.generation,
       emotion: guidance.emotion,
       status: guidance.status,
       note: guidance.note,
-      rules: rulesUsed(guidance),
+      rules,
     });
 
-    const guidanceText = renderGuidance(guidance);
     logStep(requestId, "4. Guidance text rendered", {
       guidanceText: guidanceText || "(no guidance: insufficient data)",
     });
@@ -135,8 +101,7 @@ export async function POST(req: NextRequest) {
       ...GENERATION_SETTINGS,
       providerOptions: GOOGLE_OPTIONS,
       onFinish: ({ text }) => {
-        const compliance = checkCompliance(guidance, text);
-        const evidence = replyEvidence(index, generation, emotion, text);
+        const { compliance, evidence } = auditResponse(index, guidance, generation, emotion, text);
 
         logStep(requestId, "6. Final response audit", {
           generation,
