@@ -10,10 +10,11 @@ const ONBOARDED_KEY = "chatbot:onboarded:v1";
 const GENERATION_KEY = "chatbot:generation:v1";
 
 const STARTERS = [
-  "Help me think through something",
-  "Brainstorm ideas with me",
-  "Help me write something",
-  "I just want to talk",
+  "I Felt hopeful when I met my betterhalf for the first time. She gives me hope for my remaining life without saying anything. I feel hopeful after my marriage.",
+  "One year during christmas, i did not get a single gift. It was a rough day for me.",
+  "A recent job interview that I had made me feel very anxious because I felt like I didn't come prepared.",
+  "I ate all my kids cookies and blamed it on the dog.",
+  "I once lost my job and got mad.",
 ];
 
 function loadMessages(): UIMessage[] {
@@ -45,8 +46,8 @@ export default function ChatPage() {
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       setOnboarded(
-        window.sessionStorage.getItem(ONBOARDED_KEY) === "true" &&
-          Boolean(window.sessionStorage.getItem(GENERATION_KEY)),
+        window.localStorage.getItem(ONBOARDED_KEY) === "true" &&
+          Boolean(window.localStorage.getItem(GENERATION_KEY)),
       );
     }, 0);
 
@@ -67,7 +68,7 @@ export default function ChatPage() {
   }, [setMessages]);
 
   useEffect(() => {
-    if (status === "streaming" || messages.length === 0) return;
+    if (status !== "ready" || messages.length === 0) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
     } catch {
@@ -91,7 +92,7 @@ export default function ChatPage() {
       if (!trimmed || isBusy) return;
       void sendMessage(
         { text: trimmed },
-        { body: { generation: window.sessionStorage.getItem(GENERATION_KEY) } },
+        { body: { generation: window.localStorage.getItem(GENERATION_KEY) } },
       );
       setInput("");
       requestAnimationFrame(() => focusInput());
@@ -102,8 +103,8 @@ export default function ChatPage() {
   const startFresh = () => {
     setMessages([]);
     window.localStorage.removeItem(STORAGE_KEY);
-    window.sessionStorage.removeItem(ONBOARDED_KEY);
-    window.sessionStorage.removeItem(GENERATION_KEY);
+    window.localStorage.removeItem(ONBOARDED_KEY);
+    window.localStorage.removeItem(GENERATION_KEY);
     setOnboarded(false);
     focusInput();
   };
@@ -114,25 +115,28 @@ export default function ChatPage() {
     <div className="flex min-h-screen items-center justify-center bg-background px-3 py-4 sm:px-6 sm:py-8">
       {showOnboarding && (
         <OnboardingModal
-          onComplete={(group) => {
+          onComplete={async (group) => {
             const generation = group === "genz" ? "Gen Z" : "Millennial";
-            window.sessionStorage.setItem(ONBOARDED_KEY, "true");
-            window.sessionStorage.setItem(GENERATION_KEY, generation);
+            const response = await fetch("/api/adaptive-chat/onboarding", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ generation }),
+            });
+            if (!response.ok) {
+              throw new Error(`Onboarding request failed with status ${response.status}`);
+            }
+            window.localStorage.setItem(ONBOARDED_KEY, "true");
+            window.localStorage.setItem(GENERATION_KEY, generation);
             setOnboarded(true);
           }}
         />
       )}
       <main className="flex h-[calc(100vh-2rem)] max-h-[760px] min-h-[560px] w-full max-w-xl flex-col overflow-hidden rounded-lg border border-border bg-card shadow-study sm:h-[calc(100vh-4rem)]">
         <header className="flex items-center gap-3 border-b border-border bg-header px-4 py-4 sm:px-6">
-          <span
-            aria-hidden="true"
-            className="flex size-10 shrink-0 items-center justify-center rounded-full bg-card text-sm font-semibold text-foreground"
-          >
-            cb
-          </span>
+
           <div className="min-w-0 flex-1">
             <h1 className="truncate text-base font-semibold" style={{ fontFamily: "var(--font-outfit)" }}>
-              chatbot
+              Aiva
             </h1>
             <p className="truncate text-xs text-muted-foreground">
               {isBusy ? "Responding…" : "Active session"}
@@ -153,11 +157,10 @@ export default function ChatPage() {
               <div className="flex flex-1 flex-col items-center justify-center gap-6 py-12 text-center">
                 <div>
                   <h2 className="text-xl font-semibold" style={{ fontFamily: "var(--font-outfit)" }}>
-                    Hello, I&apos;m chatbot
+                    Hello, I&apos;m Aiva!
                   </h2>
                   <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-                    Share whatever is on your mind — a question, an idea, or something you&apos;d
-                    simply like to talk through.
+                    Pick one of the following starters to begin your conversation
                   </p>
                 </div>
                 <div className="grid w-full max-w-sm gap-2 sm:grid-cols-2">
@@ -177,11 +180,6 @@ export default function ChatPage() {
               messages.map((message) => {
                 const isUser = message.role === "user";
                 const text = messageText(message);
-                const thoughts = message.parts
-                  .filter((part) => part.type === "reasoning")
-                  .map((part) => part.text)
-                  .join("\n")
-                  .trim();
 
                 if (isUser) {
                   if (!text) return null;
@@ -194,24 +192,12 @@ export default function ChatPage() {
                   );
                 }
 
-                if (!text && !thoughts) return null;
+                if (!text) return null;
 
                 return (
                   <div key={message.id} className="flex justify-start">
-                    <div className="flex max-w-[85%] flex-col gap-2">
-                      {thoughts && (
-                        <div className="whitespace-pre-wrap rounded-lg rounded-bl-sm border border-dashed border-border bg-card px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-                          <span className="mb-1 block text-[11px] font-semibold uppercase tracking-wide opacity-70">
-                            Thinking
-                          </span>
-                          <span className="italic">{thoughts}</span>
-                        </div>
-                      )}
-                      {text && (
-                        <div className="whitespace-pre-wrap rounded-lg rounded-bl-sm border border-border bg-secondary px-4 py-3 text-sm leading-relaxed text-secondary-foreground">
-                          {text}
-                        </div>
-                      )}
+                    <div className="max-w-[85%] whitespace-pre-wrap rounded-lg rounded-bl-sm border border-border bg-secondary px-4 py-3 text-sm leading-relaxed text-secondary-foreground">
+                      {text}
                     </div>
                   </div>
                 );

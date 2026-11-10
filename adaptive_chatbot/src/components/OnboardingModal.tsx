@@ -12,9 +12,11 @@ const OPTIONS: { value: AgeGroup; label: string; range: string }[] = [
 export default function OnboardingModal({
   onComplete,
 }: {
-  onComplete: (group: AgeGroup) => void;
+  onComplete: (group: AgeGroup) => Promise<void>;
 }) {
   const [selected, setSelected] = useState<AgeGroup | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <div
@@ -41,16 +43,8 @@ export default function OnboardingModal({
               key={option.value}
               type="button"
               aria-pressed={selected === option.value}
-              onClick={() => {
-                setSelected(option.value);
-                void fetch("/api/adaptive-chat/onboarding", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ generation: option.label }),
-                }).catch((error: unknown) => {
-                  console.error("[adaptive-chat][onboarding] Failed to send generation selection", error);
-                });
-              }}
+              onClick={() => setSelected(option.value)}
+              disabled={isSubmitting}
               className={`rounded-md border px-3 py-3 text-left text-sm transition-colors ${
                 selected === option.value
                   ? "border-primary bg-secondary"
@@ -65,12 +59,21 @@ export default function OnboardingModal({
 
         <button
           type="button"
-          disabled={!selected}
-          onClick={() => selected && onComplete(selected)}
+          disabled={!selected || isSubmitting}
+          onClick={() => {
+            if (!selected) return;
+            setIsSubmitting(true);
+            setError(null);
+            void onComplete(selected).catch((submitError: unknown) => {
+              console.error("[adaptive-chat][onboarding] Failed to complete generation selection", submitError);
+              setError("We could not save your selection. Please try again.");
+            }).finally(() => setIsSubmitting(false));
+          }}
           className="mt-4 w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity disabled:opacity-50"
         >
-          Continue
+          {isSubmitting ? "Saving..." : "Continue"}
         </button>
+        {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
       </div>
     </div>
   );

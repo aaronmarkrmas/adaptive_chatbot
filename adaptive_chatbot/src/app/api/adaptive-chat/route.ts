@@ -2,13 +2,12 @@ import { createGoogle } from "@ai-sdk/google";
 import { convertToModelMessages, streamText } from "ai";
 import { NextRequest, NextResponse } from "next/server";
 import { MODEL_NAME, BASE_PROMPT, GENERATION_SETTINGS, GOOGLE_OPTIONS } from "@/lib/config";
-import {
-  detectEmotion,
-} from "@/lib/adaptive/emotionDetector";
+import { detectEmotion } from "@/lib/adaptive/emotionDetector";
 import { retrieveGuidance } from "@/lib/adaptive/guidanceService";
 import { buildSystemPrompt } from "@/lib/adaptive/promptBuilder";
 import { auditResponse } from "@/lib/adaptive/responseAuditor";
 import { createRequestId, logStep, OFFLINE_MESSAGE } from "@/lib/adaptive/turnLogger";
+import { GENERATIONS } from "@/lib/library/emojiFramework";
 import { getLibraryIndex } from "@/lib/library/libraryLoader";
 
 const google = createGoogle({ apiKey: process.env.GEMINI_API_KEY });
@@ -49,6 +48,9 @@ export async function POST(req: NextRequest) {
 
     if (!userMessage) {
       return NextResponse.json({ error: "A user message is required" }, { status: 400 });
+    }
+    if (typeof generation !== "string" || !GENERATIONS.includes(generation as (typeof GENERATIONS)[number])) {
+      return NextResponse.json({ error: "Invalid generation" }, { status: 400 });
     }
 
     logStep(requestId, "0. User generation", {

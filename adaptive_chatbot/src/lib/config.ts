@@ -1,6 +1,5 @@
 export const MODEL_NAME = "gemini-2.5-flash";
-export const BASE_PROMPT =
-  "You are a friendly, helpful chatbot. Respond naturally to the user.";
+export const BASE_PROMPT = "Respond naturally to the user's message.";
 
 export const GENERATION_SETTINGS = {
   temperature: 0.7,
