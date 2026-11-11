@@ -1,77 +1,200 @@
-# Methodology-to-Implementation Update Table
+# Methodology-to-Implementation Alignment
 
-This table lists every material difference between the original Phase 3
-methodology and the current repository implementation. Use the final column to
-update the thesis so that the written methodology describes the actual system.
+This document records the behavior implemented by the adaptive chatbot. The
+five fixed starter prompts are the controlled evaluation stimuli. Free-text
+messages remain available for exploratory use and are not mixed with the
+fixed-stimulus comparison.
 
-## Phase 3 alignment table
+## Experimental workflow
 
-| Section | Original methodology statement | What the repository currently does | What to update in the methodology |
-|---|---|---|---|
-| 4.4.1 Library format | Each row contains generation, emotion category, response choice, confidence, lift, p-value, `n`, recommendation, and confidence level. | [`src/lib/library/library.csv`](./src/lib/library/library.csv) contains these fields. The loader validates the CSV and indexes it in memory on first use. | Keep this statement. Add that the CSV is validated and indexed once per server process on first use, without recomputing statistics at runtime. |
-| 4.4.1 Derived fields | The methodology does not describe derived fields. | `outcome` (`Match`/`No Match`) is derived from “prefer”/“avoid” in the recommendation when the CSV has no outcome column. Preference rank is derived from confidence and sample size when rank is absent. | Add that outcome and rank are runtime metadata derived from existing validated library fields; no statistical analysis is recomputed. |
-| 4.4.1 Library identity | The methodology does not describe library versioning. | `LibraryIndex` creates a content-based version hash. The version is logged with completed response audits. | Add that every completed turn records the library content version used for lookup. |
-| 4.4.2 Lookup inputs | The primary lookup uses generation, emotional context/topic, and candidate emoji. | Before Gemini generates a response, no candidate emoji exists. The live guidance lookup uses only `(user generation, detected emotion)`. | Replace the candidate-emoji-first description with: “Pre-generation guidance is retrieved using the receiving user’s generation and the detected emotion.” |
-| 4.4.2 Producer generation | Producer generation is not used. | Producer generation is not collected or used. The selected generation represents the response recipient. | Keep this statement and clarify that only the receiving user’s generation is collected during onboarding. |
-| 4.4.2 Exact candidate lookup | The function first finds an exact `(generation, topic, emoji)` rule. | `getGuidance()` retrieves all rules for `(generation, emotion)` before generation. | State that the generation-emotion lookup is the primary pre-generation query. The candidate-emoji lookup is used only after generation for auditing. |
-| 4.4.2 Generation-plus-emoji fallback | If no exact match exists, lookup falls back to generation + emoji while ignoring topic. | This fallback is not used by the live adaptive route. | Remove this as a live pre-generation behavior. If retained, describe it only as a post-generation audit helper, not as the guidance-selection path. |
-| 4.4.2 No match | No match returns a default insufficient-data response. | Missing generation-emotion rules return `status: insufficient`; no emoji guidance is rendered; Gemini receives the base prompt and still generates a response. | Specify that missing rules cause a base-prompt-only response, not an offline error. Record the context as insufficient. |
-| 4.4.2 Unknown emotion | The methodology does not define an unsupported detector label. | Unsupported labels normalize to `null`; guidance status becomes `insufficient`; no emoji guidance is injected; the base prompt is still used. | Add this explicit fallback: unknown/empty labels do not cause the system to guess a category. |
-| 4.4.2 Detector failure | The methodology only says that a pre-call detects the emotion. | If the emotion API call throws, the system returns HTTP 503, shows the offline message, and does not generate an unguided adaptive response. | Add that a detector API failure invalidates/stops the turn. It must be excluded from adaptive response analysis rather than counted as an unguided adaptive result. |
-| 4.4.2 Avoid-only contexts | The methodology implies that a most relevant rule is retrieved. | Some contexts contain only `No Match` rules, such as parts of disgust and fear. The system injects an avoidance-only guidance block. | Add an `avoid_only` decision state. State that emojis not present in the library may still be generated and are marked `no evidence` during audit. |
-| 4.4.2 Rule ordering | The methodology does not define ordering among multiple rules. | Preferred rules are ordered by rank and confidence. Avoid rules are ordered by confidence. | Add the ordering policy. Clarify that ordering guides Gemini but does not guarantee which preferred emoji it selects. |
-| 4.4.3 Rendering | Recommendations are rendered into natural-language sentences. | `renderGuidance()` includes generation, emotion, recommendation text, and confidence level. | Keep the statement and add these rendered fields. |
-| 4.4.3 System prompt | Guidance is embedded in the system prompt before each response. | `BASE_PROMPT` and rendered guidance are combined and sent as Gemini’s system prompt. | Keep the statement. Add that guidance is omitted when status is `insufficient`. |
-| 4.4.3 User visibility | Guidance is not visible to the user. | Guidance is sent only in the system prompt and is not rendered as a chat message. | Keep the statement. |
-| 4.4.3 Response enforcement | The original methodology does not state whether output is post-processed. | The response is streamed unchanged. The application does not remove emojis, insert emojis, retry for compliance, or rewrite the text. | Add that guidance is advisory and compliance is measured after generation; it is not mechanically enforced. |
-| 4.4.3 Medium confidence | The methodology lists confidence level but does not define its runtime effect. | `medium` is included in the rendered recommendation. No separate algorithmic constraint is applied. | State that medium confidence is communicated as softer evidence to Gemini but is not mathematically enforced. |
-| 4.4.4 Onboarding | The adaptive chatbot asks for Gen Z or Millennial at onboarding. | The modal provides exactly two buttons. The selected value is validated server-side by the onboarding logging route and stored in session storage. | Keep the statement. Add that invalid/tampered generation values are rejected server-side before response generation. |
-| 4.4.4 Invalid generation | The methodology does not define invalid onboarding input. | The normal UI cannot submit another value, but a tampered request causes lookup validation to fail and no Gemini response is produced. | Add server-side validation as a defensive decision. Describe invalid requests as rejected/excluded, not as a normal participant path. |
-| 4.4.4 Per-message emotion | A pre-call detects and classifies emotion for each message. | A Gemini pre-call runs for every submitted user message, so emotion can change between turns. | Keep the statement and explicitly state that classification is repeated independently on every message. |
-| 4.4.4 User message | The message is passed to the chatbot. | The server extracts the newest user text for emotion detection while sending the full conversation history to Gemini. | Add that only the latest user text is classified, while the full conversation remains available to the response model. |
-| 4.4.4 Adaptive prompt | The recommendation is injected into the Gemini system prompt. | The original user message is unchanged; only the system prompt receives guidance. | Keep the statement and explicitly distinguish the unchanged user message from the augmented system prompt. |
-| 4.4.4 Final response | The user receives only the chatbot response. | The response is streamed to the UI. Internal guidance and audit data are not displayed in the chat. | Keep the statement. |
-| 4.4.4 Response audit | The original methodology does not define post-generation auditing. | After streaming completes, the route runs `checkCompliance()` and `replyEvidence()`. | Add that every completed response is audited for rule compliance and emoji evidence without modifying the response. |
-| 4.4.4 Audit fields | The methodology does not specify operational logs. | The audit logs generation, emotion, status, library version, reply, compliance, and evidence. | Add these fields to the implementation/evaluation description. |
-| 4.4.4 Failed final generation | The methodology does not describe final model failure. | A final-generation failure returns the offline message and does not produce a valid completed adaptive turn. | Add that failed turns are recorded as system failures and excluded from response/compliance comparisons. |
-| 4.4.4 Detector retry | The methodology does not specify retry behavior for a failed emotion pre-call. | The current route stops immediately on the first detector exception and returns HTTP 503; it does not retry. | State either “no retry is performed; the turn stops immediately” or implement and document one retry. Do not claim a retry unless it exists in the route. |
-| 4.4.4 Stream failure audit | The methodology does not define what happens if final Gemini streaming fails after the request begins. | `onFinish` audits successful completions. A stream/provider failure may not invoke the final audit, while the outer error path returns the offline message. | Add that only successfully completed responses receive compliance/evidence audits; stream failures are separate invalid system-failure records. |
-| 4.4.4 Onboarding log delivery | The methodology says onboarding is recorded, but does not define logging failure behavior. | The client sends the onboarding log request without awaiting it. A logging-route failure is reported in the browser console, but the user can continue. | State that onboarding selection is stored locally independently of diagnostic-log delivery, or make logging delivery blocking if the research record requires guaranteed onboarding logs. |
-| 4.4.4 Session boundary | The methodology says generation is retained for the session and conversation context remains identical. | Generation is stored in `sessionStorage`, but conversation history is stored in `localStorage`; an old conversation can be restored under a new browser session/generation. | Define the session boundary and ensure persisted conversation and generation use the same evaluation session, or clear old conversation history when generation is absent/changed. |
-| 4.4.4 Base prompt parity | The vanilla condition must differ only by adaptive guidance. | The adaptive route uses `BASE_PROMPT` from `src/lib/config.ts`. The separate vanilla implementation must use the exact same base prompt, model, temperature, top-p, token limit, provider options, and conversation history policy. | Record the exact shared model configuration and base prompt in the methodology. Treat any mismatch as an experimental confound. |
-| 4.4.4 Model randomness | The methodology requires controlled comparison but does not specify sampling settings. | Emotion detection uses temperature `0`; response generation uses temperature `0.7`, top-p `0.95`, and a 1024-token limit. | Report these settings and keep them identical in both adaptive and vanilla conditions. State whether repeated runs are expected to vary because response temperature is nonzero. |
-| 4.4.4 Runtime data source | The methodology describes a validated library but not auxiliary data files. | `annotated_dataset.csv` is present in the repository but is not read by the runtime; only `library.csv` affects guidance. | State that runtime lookup uses only the validated rule library. Treat the annotated dataset as source/provenance material, not a runtime input. |
-| 4.4.4 Error classification | The methodology does not distinguish invalid input, detector failure, library failure, and final-generation failure. | Several failures currently reach a generic offline response, while empty input returns HTTP 400 and detector failure returns HTTP 503. | Document separate failure categories and exclude all non-completed turns from response-quality/compliance analysis. |
-| 4.4.4 Full prompt logging | The methodology does not define whether raw prompts are research data. | Development logs include the raw user message, system prompt, rendered guidance, and final reply. | Explicitly label full prompt/reply logging as development validation only. Define consent, retention, access, and redaction before public evaluation. |
-| Implementation quality | The methodology assumes a validated implementation but does not describe verification. | The repository currently has build/lint checks but no automated behavior test suite for normalization, lookup, fallback, prompt construction, or audit calculations. | Add a verification statement and test matrix before claiming thesis-level reproducibility. |
-| Repository reproducibility | The methodology assumes all runtime artifacts are available. | The adaptive framework, CSV, onboarding route, and integration reference must be included in the repository; missing any of them breaks or changes the adaptive system. | Ensure all runtime artifacts are committed and report the commit/library version used for evaluation. |
-| 4.4.4 Vanilla condition | Vanilla uses the same model and emotional prompt without onboarding, library lookup, or emoji guidance. | This repository contains the adaptive route only; the vanilla condition is maintained separately. | State that the vanilla implementation is external/separate and must use the same model, settings, prompt, conversation context, and evaluation procedure. |
-| 4.4.4 Experimental difference | The only difference should be the injected framework guidance. | The adaptive route adds onboarding, emotion pre-classification, rule lookup, guidance, and audit logging. | Clarify that audit logging is instrumentation and must not alter generation. The experimental generation difference remains the hidden adaptive guidance. |
-| 4.4.4 Evaluation prompts | Both chatbots use the same emotional topics/prompts. | The repository accepts arbitrary user messages; it does not enforce the five Wave 1 scenarios. | State that controlled evaluation must provide the same approved emotional prompts to both conditions. |
-| Reproducibility | The methodology does not identify the exact runtime artifact. | The rule library is loaded from `src/lib/library/library.csv`; its content hash is available as `libraryVersion`. | Report the library version, model name, model settings, and prompt configuration for each evaluation run. |
-| Logging privacy | The methodology does not define logging scope. | Development logs include full user input, user prompt, system prompt, and generated reply. | State that full prompt logging is for development validation only. Define consent, access, retention, and redaction rules before participant deployment. |
+1. The user selects `Gen Z` or `Millennial` in the onboarding modal.
+2. The browser sends the selection to
+   `POST /api/adaptive-chat/onboarding`.
+3. The server validates and logs the selection. The browser stores the
+   onboarding and generation values in `localStorage`.
+4. The user selects one of five starter prompts or enters free text.
+5. The client sends the full conversation history, generation, and an optional
+   starter-prompt ID to `POST /api/adaptive-chat`.
+6. The server extracts the newest user message.
+7. If a starter ID is present, the server validates the ID and exact text and
+   uses its predefined emotion. No emotion detector call is made.
+8. If no starter ID is present, one Gemini pre-call classifies the free-text
+   message as one of the five emotions or `out_of_scope`.
+9. An `out_of_scope` result is rejected with HTTP 422 before final generation.
+10. The server retrieves rules using `(generation, canonical emotion)`.
+11. The rules are rendered into hidden emoji guidance and appended to the base
+    system prompt.
+12. Gemini receives the full conversation and augmented system prompt.
+13. The response streams to the UI. On successful completion, the response is
+    persisted and audited.
 
-## Required decision table to add or reference
+## Controlled stimuli
 
-| Runtime condition | Actual system decision | Evaluation treatment |
+The registered prompt-to-emotion mappings are:
+
+| Prompt ID | Intended context | Emotion |
 |---|---|---|
-| Generation is `Gen Z` or `Millennial` | Continue and store generation for the session. | Valid adaptive session. |
-| Generation is invalid or missing | Reject before Gemini response generation. | Exclude the turn/session and require valid onboarding in the client. |
-| Emotion label is one of the five categories | Query generation-emotion rules. | Valid classified adaptive turn. |
-| Emotion label is a recognized alias/abbreviation | Normalize to a canonical library category, then query. | Valid classified adaptive turn; retain raw and normalized labels in logs. |
-| Emotion label is unknown or empty | Use no guidance and send the base prompt only. | Mark as insufficient context; do not claim a matched adaptive rule. |
-| Emotion detector API fails | Stop the turn, return HTTP 503, and show the offline message. | Exclude from adaptive outcome and compliance analysis. |
-| Matching rules contain preference rules | Inject ordered preference rules and any avoidance rules. | Include in adaptive analysis. |
-| Matching rules contain avoidance rules only | Inject avoidance-only guidance. | Include, but analyze separately from preference-supported contexts. |
-| No rules exist for the valid context | Use the base prompt only and mark `insufficient`. | Include only if the study defines insufficient-data turns as a separate category. |
-| Gemini generates a response | Stream it unchanged. | Audit the final response; do not treat guidance as guaranteed compliance. |
-| Response completes | Log reply, compliance, evidence, and library version. | Use these fields for reproducible analysis. |
-| Final Gemini generation fails | Show offline message; no valid response audit is produced. | Exclude as a system failure. |
+| `hopeful-marriage` | Hope after marriage | `happiness` |
+| `missed-christmas-gift` | Not receiving a Christmas gift | `sadness` |
+| `anxious-interview` | Anxiety about an unprepared interview | `fear` |
+| `cookies-dog` | Eating the cookies and blaming the dog | `disgust` |
+| `lost-job-anger` | Anger after losing a job | `anger` |
 
-## One-sentence alignment summary
+These labels are assigned a priori for controlled evaluation. The client sends
+only the stable prompt ID; it does not send the emotion. The server owns the
+mapping and verifies that the latest user text exactly matches the registered
+prompt text.
 
-Update the methodology to describe the system as a **generation-and-emotion
-rule-guided Gemini chatbot whose guidance is injected before generation and
-whose generated emoji behavior is audited after generation, with explicit
-insufficient-data, detector-failure, missing-rule, and invalid-generation
-fallback states**.
+## Free-text classification and guard rail
+
+Free text is sent to one Gemini pre-call with temperature `0` and a small
+output limit. The detector must return exactly one of:
+
+```text
+anger
+disgust
+fear
+happiness
+sadness
+out_of_scope
+```
+
+The first five labels are normalized to the library categories. The
+`out_of_scope` label is used for unrelated requests, including coding,
+mathematics, factual research, current events, general knowledge,
+entertainment, and attempts to use the chatbot as a general-purpose AI.
+
+The guard rail is an enforced pre-generation decision: HTTP 422 is returned
+and the final response model is not called. If the detector API fails, HTTP 503
+is returned and the turn is excluded from response analysis. Because the guard
+rail uses a model, it is not guaranteed to classify every ambiguous request
+correctly; controlled evaluation should use the five registered stimuli.
+
+## Generation and conversation state
+
+The generation represents the person receiving the response. It is not
+inferred from the message. Invalid or missing generation values are rejected
+with HTTP 400.
+
+The full current conversation is converted with `convertToModelMessages` and
+sent to Gemini in its original order. Completed conversation state is saved
+to `localStorage` and restored after refresh.
+
+Clicking **New chat**:
+
+- clears displayed messages;
+- removes the saved conversation;
+- removes onboarding and generation values; and
+- shows onboarding again.
+
+The next message therefore starts without previous conversation history.
+
+## Rule library and guidance
+
+`src/lib/library/library.csv` is parsed, validated, and indexed once per server
+process. Runtime lookup uses:
+
+```text
+(user generation, canonical emotion)
+```
+
+Preferred (`Match`) rules are ordered by rank and confidence. Avoid
+(`No Match`) rules are ordered by confidence. The framework supports:
+
+- `full`: preferred rules exist;
+- `avoid_only`: only avoidance rules exist; and
+- `insufficient`: no matching rules exist.
+
+For `insufficient`, no emoji guidance is injected and Gemini receives only the
+base prompt. The system does not invent statistical rules.
+
+The exact `(generation, emotion, emoji)` lookup is used after generation by
+the response-evidence audit. It is not the pre-generation selector because the
+candidate emoji is unknown at lookup time.
+
+## Final Gemini generation
+
+The final response uses the same configuration required for the vanilla
+condition:
+
+```text
+model: gemini-2.5-flash
+base prompt: Respond naturally to the user's message.
+temperature: 0.7
+topP: 0.95
+maxOutputTokens: 1024
+thinkingBudget: 256
+includeThoughts: false
+```
+
+The final system prompt is:
+
+```text
+Respond naturally to the user's message.
+
+[hidden emoji guidance when valid rules exist]
+```
+
+The user's message is not rewritten. Guidance is advisory and is not
+post-processed into the response.
+
+## Streaming, auditing, and failure handling
+
+The final response is streamed with `streamText` and returned through the AI
+SDK UI-message stream. The UI displays assistant text only; Gemini reasoning
+is not included because `includeThoughts` is false.
+
+After a successful completion, the server records:
+
+- generation;
+- canonical emotion and its source;
+- guidance status and rules;
+- library content version;
+- generated reply;
+- compliance result; and
+- emoji evidence.
+
+The response is not rewritten when it fails compliance. Failed or incomplete
+turns do not constitute valid response observations.
+
+Failure decisions:
+
+| Condition | System decision | Evaluation treatment |
+|---|---|---|
+| Missing user text | HTTP 400 | Invalid input; exclude |
+| Invalid generation | HTTP 400 | Invalid session/input; exclude |
+| Invalid starter ID/text | HTTP 400 | Invalid stimulus; exclude |
+| Free text classified `out_of_scope` | HTTP 422; no final generation | Exclude |
+| Free-text detector failure | HTTP 503; no final generation | Exclude as system failure |
+| Library validation/loading failure | Request fails | Exclude as system failure |
+| Final Gemini generation failure | Offline error; no completed audit | Exclude as system failure |
+| Successful response | Stream, persist, and audit | Valid observation |
+
+## Vanilla comparison alignment
+
+The vanilla and adaptive conditions must use the same:
+
+- Gemini model;
+- exact base prompt;
+- generation settings and thinking configuration;
+- conversation history and persistence behavior;
+- five starter prompts and prompt order;
+- input restrictions and out-of-scope guard rail;
+- streaming and response display; and
+- failure and exclusion rules.
+
+The intended generation difference is the adaptive condition's hidden
+generation-and-emotion emoji guidance. Emotion assignment for the five
+controlled stimuli is shared, deterministic, and not an experimental
+difference. Free-text interactions should be reported separately.
+
+## Reproducibility and privacy
+
+Each completed adaptive turn records the content-based library version. An
+evaluation record should also report the model name, model settings, base
+prompt,
+controlled prompt IDs, and whether the emotion was predefined or detected.
+
+Development logs can include user input, prompts, guidance, and replies.
+Before participant deployment, define consent, access, retention, and
+redaction requirements for these logs.
