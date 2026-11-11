@@ -2,10 +2,11 @@ import { createGoogle } from "@ai-sdk/google";
 import { convertToModelMessages, streamText } from "ai";
 import { NextRequest, NextResponse } from "next/server";
 import { MODEL_NAME, BASE_PROMPT, GENERATION_SETTINGS, GOOGLE_OPTIONS } from "@/lib/config";
-import { detectEmotion } from "@/lib/adaptive/emotionDetector";
 import { retrieveGuidance } from "@/lib/adaptive/guidanceService";
 import { buildSystemPrompt } from "@/lib/adaptive/promptBuilder";
 import { auditResponse } from "@/lib/adaptive/responseAuditor";
+import { getStarterPrompt } from "@/lib/adaptive/starterPrompts";
+import { detectEmotion } from "@/lib/adaptive/emotionDetector";
 import { createRequestId, logStep, OFFLINE_MESSAGE } from "@/lib/adaptive/turnLogger";
 import { GENERATIONS } from "@/lib/library/emojiFramework";
 import { getLibraryIndex } from "@/lib/library/libraryLoader";
@@ -43,7 +44,7 @@ export async function POST(req: NextRequest) {
   const requestId = createRequestId();
 
   try {
-    const { messages, generation } = await req.json();
+    const { messages, generation, promptId } = await req.json();
     const userMessage = getLatestUserText(messages);
 
     if (!userMessage) {
@@ -51,6 +52,10 @@ export async function POST(req: NextRequest) {
     }
     if (typeof generation !== "string" || !GENERATIONS.includes(generation as (typeof GENERATIONS)[number])) {
       return NextResponse.json({ error: "Invalid generation" }, { status: 400 });
+    }
+    const starterPrompt = promptId ? getStarterPrompt(promptId) : undefined;
+    if (promptId && (!starterPrompt || starterPrompt.text !== userMessage)) {
+      return NextResponse.json({ error: "A valid evaluation prompt is required" }, { status: 400 });
     }
 
     logStep(requestId, "0. User generation", {
@@ -61,20 +66,43 @@ export async function POST(req: NextRequest) {
       input: userMessage,
     });
 
-    let detectedEmotion;
-    try {
-      detectedEmotion = await detectEmotion(userMessage);
-    } catch (error) {
-      console.error(`[adaptive-chat][${requestId}] Emotion detection failed`, error);
-      return NextResponse.json({ error: OFFLINE_MESSAGE }, { status: 503 });
-    }
+    let emotion: string;
+    if (starterPrompt) {
+      emotion = starterPrompt.emotion;
+      logStep(requestId, "2. Emotion assigned", {
+        input: userMessage,
+        promptId: starterPrompt.id,
+        emotionSource: "predefined evaluation prompt",
+        normalizedEmotion: emotion,
+      });
+    } else {
+      let detectedEmotion;
+      try {
+        detectedEmotion = await detectEmotion(userMessage);
+      } catch (error) {
+        console.error(`[adaptive-chat][${requestId}] Emotion detection failed`, error);
+        return NextResponse.json({ error: OFFLINE_MESSAGE }, { status: 503 });
+      }
 
-    const emotion = detectedEmotion.normalized;
-    logStep(requestId, "2. Emotion detected", {
-      input: userMessage,
-      detectorOutput: detectedEmotion.raw,
-      normalizedEmotion: emotion,
-    });
+      if (detectedEmotion.normalized === "out_of_scope") {
+        logStep(requestId, "2. Guard rail rejected message", {
+          input: userMessage,
+          detectorOutput: detectedEmotion.raw,
+        });
+        return NextResponse.json(
+          { error: "This chatbot is limited to emotional and supportive conversations." },
+          { status: 422 },
+        );
+      }
+
+      emotion = detectedEmotion.normalized;
+      logStep(requestId, "2. Emotion detected", {
+        input: userMessage,
+        detectorOutput: detectedEmotion.raw,
+        emotionSource: "Gemini emotion detector",
+        normalizedEmotion: emotion,
+      });
+    }
 
     const index = getLibraryIndex();
     const { guidance, rules, guidanceText } = retrieveGuidance(index, generation, emotion);

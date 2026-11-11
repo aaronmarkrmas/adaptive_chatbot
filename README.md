@@ -1,33 +1,40 @@
 # Adaptive Chatbot
 
-This repository contains a Next.js chatbot powered by Google Gemini. Unlike a vanilla chatbot, it adapts emoji behavior using:
+This repository contains the adaptive chatbot application. It uses Google
+Gemini to generate supportive responses and applies emoji guidance from the
+validated rule library in
+[`adaptive_chatbot/src/lib/library/library.csv`](./adaptive_chatbot/src/lib/library/library.csv).
 
-1. The user's selected generation: `Gen Z` or `Millennial`.
-2. The emotion detected in the latest user message.
-3. Matching rules from `adaptive_chatbot/src/lib/library/library.csv`.
+The adaptive behavior uses:
 
-The matched recommendations are added to Gemini's hidden system prompt. The guidance is not shown as a separate message to the user.
+1. The receiving user's selected generation: `Gen Z` or `Millennial`.
+2. A predefined emotion for one of the five evaluation prompts, or a Gemini
+   emotion/guard-rail pre-call for free-text messages.
+3. Generation-and-emotion rules from `library.csv`.
+4. Hidden emoji guidance added to the final Gemini system prompt.
+5. Post-generation compliance and evidence auditing.
 
 ## Features
 
 - Single-conversation chat interface.
 - Generation onboarding for Gen Z and Millennial users.
-- Gemini emotion pre-classification.
+- Five controlled starter prompts with deterministic emotion labels.
+- Free-text input with emotion detection and an `out_of_scope` guard rail.
 - CSV-backed emoji rule lookup.
-- Hidden, context-specific emoji guidance.
+- Hidden context-specific emoji guidance.
 - Streaming Gemini responses.
-- Conversation persistence in browser `localStorage`.
-- Server-side logs for each adaptive decision.
+- Conversation and onboarding persistence in browser `localStorage`.
+- Server-side request and audit logs.
 
-## Tech Stack
+## Tech stack
 
 - Next.js 16 App Router
 - React 19 and TypeScript
 - Vercel AI SDK
-- Google Gemini (`gemini-2.5-flash`)
+- Google Gemini `gemini-2.5-flash`
 - Tailwind CSS v4
 
-## Getting Started
+## Getting started
 
 From the application directory:
 
@@ -50,43 +57,7 @@ npm run dev
 
 Open <http://localhost:3000>.
 
-## Repository Structure
-
-```text
-adaptive_chatbot/
-├── README.md
-├── package.json
-├── next.config.ts
-├── src/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── adaptive-chat/
-│   │   │       ├── onboarding/
-│   │   │       │   └── route.ts       # Logs generation selection in the Next.js terminal
-│   │   │       └── route.ts            # Emotion detection, lookup, prompt construction, streaming
-│   │   ├── page.tsx                    # Chat UI and client-side generation/session handling
-│   │   ├── layout.tsx
-│   │   └── globals.css
-│   ├── components/
-│   │   └── OnboardingModal.tsx         # Generation selection modal
-│   ├── lib/
-│   │   ├── adaptive/
-│   │   │   ├── emotionDetector.ts      # Gemini emotion pre-call and label normalization
-│   │   │   ├── guidanceService.ts      # Rule lookup and guidance rendering
-│   │   │   ├── promptBuilder.ts        # Hidden system-prompt construction
-│   │   │   ├── responseAuditor.ts      # Compliance and evidence auditing
-│   │   │   └── turnLogger.ts           # Request IDs, structured logs, offline message
-│   │   ├── library/
-│   │   │   ├── emojiFramework.ts       # CSV validation, lookup, rendering, auditing
-│   │   │   ├── libraryLoader.ts        # Validated library loading and caching
-│   │   │   └── library.csv             # Validated generation/emotion rules
-│   │   └── config.ts                   # Gemini model and generation settings
-│   ├── integrationExample.ts            # Non-streaming integration reference
-│   └── annotated_dataset.csv
-└── ...
-```
-
-## Complete Chatbot Workflow
+## End-to-end workflow
 
 ```text
 Open application
@@ -95,54 +66,60 @@ Open application
 Select Gen Z or Millennial
     |
     +--> POST /api/adaptive-chat/onboarding
-    |       +--> Log generation in Next.js terminal
-    |
-    +--> Save generation in sessionStorage
+    |       +--> Validate and log generation
+    |       +--> Save onboarding state in localStorage
     |
     v
-Submit user message
+Select a starter prompt or type a message
     |
-    +--> Send conversation history and generation
+    +--> Send full conversation history and generation
     |
-    +--> Extract latest user text
+    +--> Extract the latest user text
     |
-    +--> Gemini emotion pre-call
-    |       +--> Normalize detected label
+    +--> Starter prompt ID supplied?
+    |       |
+    |       +--> Yes: validate ID and exact text; use predefined emotion
+    |       |
+    |       +--> No: Gemini classifies emotion or returns out_of_scope
     |
-    +--> Query library.csv
+    +--> out_of_scope?
+    |       +--> Yes: reject with HTTP 422; do not generate a response
     |
-    +--> Render guidance text
+    +--> Query library.csv with generation + emotion
+    |
+    +--> Render hidden emoji guidance
     |
     +--> Combine base prompt and guidance
     |
-    +--> Send system prompt and conversation to Gemini
+    +--> Send system prompt and full conversation to Gemini
     |
     v
-Stream Gemini response to the UI
+Stream response, persist completed messages, and audit the response
 ```
 
-## Decision-Making Behavior
+## Controlled starter prompts
 
-### 1. Generation selection
+The five starter prompts are registered in
+[`starterPrompts.ts`](./adaptive_chatbot/src/lib/adaptive/starterPrompts.ts).
+Their emotions are assigned before evaluation and are not detected by Gemini:
 
-The onboarding modal presents two choices:
+| Prompt ID | Emotion |
+|---|---|
+| `hopeful-marriage` | `happiness` |
+| `missed-christmas-gift` | `sadness` |
+| `anxious-interview` | `fear` |
+| `cookies-dog` | `disgust` |
+| `lost-job-anger` | `anger` |
 
-- `Gen Z`
-- `Millennial`
+The client sends the stable prompt ID. The server validates both the ID and
+the exact prompt text, so the browser cannot select a different emotion by
+modifying the request.
 
-When an option is clicked, the browser immediately sends the canonical generation label to `POST /api/adaptive-chat/onboarding`. The route validates the label and logs it in the Next.js terminal. This occurs before the user clicks **Continue** or submits a message.
+## Free-text behavior and guard rail
 
-The selected generation is also saved in `sessionStorage` and included in every chat request. It represents the person receiving the response; it is not inferred from the message.
-
-### 2. User message extraction
-
-The client sends the conversation history to `POST /api/adaptive-chat`. The server searches from the newest message backward and extracts the latest user text.
-
-If no usable user text exists, the server returns HTTP 400 and does not call the emotion detector or response model.
-
-### 3. Emotion detection
-
-Before generating the response, the server makes a separate Gemini pre-call. Gemini is instructed to return exactly one complete lowercase label:
+If no starter prompt ID is supplied, the server calls
+[`emotionDetector.ts`](./adaptive_chatbot/src/lib/adaptive/emotionDetector.ts)
+once. The detector must return exactly one of:
 
 ```text
 anger
@@ -150,121 +127,93 @@ disgust
 fear
 happiness
 sadness
+out_of_scope
 ```
 
-The framework normalizes aliases, including:
+The first five labels continue to rule lookup. `out_of_scope` rejects the
+request with HTTP 422 and prevents the final response call. The guard rail is
+intended to reject coding, mathematics, research, current events, general
+knowledge, entertainment, and other general-purpose AI requests.
+
+Detector failure returns HTTP 503 and does not produce an unclassified
+response.
+
+The five fixed prompts are the controlled evaluation stimuli. Free-text turns
+are exploratory and should be analyzed separately from the fixed-prompt
+comparison.
+
+## Generation and persistence
+
+The onboarding modal accepts exactly `Gen Z` or `Millennial`. The selection is
+validated and logged by
+`POST /api/adaptive-chat/onboarding`, then saved in `localStorage`. Refreshing
+the browser preserves the selection and saved conversation.
+
+Clicking **New chat**:
+
+1. Clears displayed messages.
+2. Removes the saved conversation.
+3. Removes onboarding and generation values.
+4. Shows the onboarding modal again.
+
+The next message therefore starts with no previous conversation context.
+
+## Rule lookup and guidance
+
+`library.csv` is parsed, validated, and indexed once per server process.
+Guidance is selected with:
 
 ```text
-happy, joy, joyful -> happiness
-sad -> sadness
-angry, mad -> anger
-scared, afraid, fearful -> fear
-dis, disgusted -> disgust
+(user generation, canonical emotion)
 ```
 
-Decision behavior:
-
-| Detector result | Behavior |
-| --- | --- |
-| Valid emotion | Continue to library lookup |
-| Recognized alias or abbreviation | Convert it to the canonical library emotion |
-| Empty, unknown, or unsupported label | Treat the context as insufficient data; inject no emoji guidance |
-
-An unknown emotion does not cause the chatbot to guess a rule. The normal base chatbot prompt is still sent to Gemini, so the user can receive a normal response without unsupported adaptation.
-
-If the emotion pre-call itself fails, the request returns an offline error instead of generating an unclassified response. The chat displays: **“The chatbot is offline. Please reload the page or try contacting the researchers.”**
-
-### 4. Library loading and lookup
-
-`library.csv` is parsed and validated once per server process by `LibraryIndex`. Rules are queried using:
-
-```text
-(user generation, detected emotion)
-```
-
-Each matching context is divided into:
-
-- **Prefer rules (`Match`)**: responses supported by the study.
-- **Avoid rules (`No Match`)**: responses associated with misinterpretation.
-
-Prefer rules are ordered by rank and confidence. Avoid rules are ordered by confidence.
-
-Decision behavior:
-
-| Lookup result | Behavior |
-| --- | --- |
-| Prefer rules exist | Include preferred emoji recommendations and any avoid rules |
-| Only avoid rules exist | Include the avoid list; mark the result `avoid_only` |
-| No rules for generation/emotion | Mark the result `insufficient`; inject no emoji guidance |
-| Invalid generation | Reject the request instead of silently using another generation |
-
-When no rule can be returned, Gemini still receives `BASE_PROMPT` and the original conversation. The response is therefore generated normally, but without evidence-based emoji adaptation.
-
-The three-input helper (`generation + emotion + emoji`) is for auditing an emoji already used or considered. It is not the pre-generation selector because the candidate emoji is unknown before Gemini generates the response.
-
-### 5. Guidance rendering
-
-For a valid rule context, the framework renders a hidden instruction containing:
-
-- User generation.
-- Detected emotion.
-- Recommendation sentences from the CSV.
-- Confidence level for each recommendation.
-
-If the lookup is `insufficient`, `renderGuidance()` returns an empty string. This prevents the system from inventing or applying unsupported recommendations.
-
-### 6. Final Gemini request
+Preferred rules are ordered by rank and confidence. Avoid rules are ordered
+by confidence. Missing rules produce `insufficient` guidance and the base
+prompt is still sent without invented recommendations.
 
 The final system prompt is:
 
 ```text
-BASE_PROMPT
+Respond naturally to the user's message.
 
-EMOJI GUIDANCE FOR THIS REPLY
+[hidden emoji guidance when valid rules exist]
 ```
 
-The guidance is internal and instructs Gemini not to reveal it. The original user message remains a user message; it is not rewritten into the system prompt.
+The original user message and complete conversation history remain unchanged.
 
-The server logs each stage using a request ID:
+## Response, persistence, and auditing
+
+The final response uses:
 
 ```text
-[adaptive-chat][request-id] 0. User generation
-[adaptive-chat][request-id] 1. User submitted text
-[adaptive-chat][request-id] 2. Emotion detected
-[adaptive-chat][request-id] 3. Valid guidance rules selected
-[adaptive-chat][request-id] 4. Guidance text rendered
-[adaptive-chat][request-id] 5. Final prompt sent to Gemini
+model: gemini-2.5-flash
+temperature: 0.7
+topP: 0.95
+maxOutputTokens: 1024
+thinkingBudget: 256
+includeThoughts: false
 ```
 
-The final log includes both `systemPrompt` and `userPrompt`, allowing the complete decision and prompt construction to be inspected in the Next.js terminal.
+Responses stream through `streamText` and
+`toUIMessageStreamResponse`. The UI displays only assistant text. Completed
+conversation state is saved to `localStorage`; incomplete or failed states are
+not intentionally persisted.
 
-### 7. Response and persistence
+After a successful stream, the server records the library version, reply,
+compliance result, and emoji evidence. Auditing does not modify the response.
 
-After prompt construction, the route converts the conversation with `convertToModelMessages`, calls Gemini with `streamText`, and returns an AI SDK UI-message stream.
-
-The client displays the streamed response and saves completed messages to `localStorage`. Clicking **New chat** clears the saved messages and onboarding session, requiring generation selection again.
-
-## API Routes
+## API routes
 
 | Route | Purpose |
-| --- | --- |
-| `POST /api/adaptive-chat/onboarding` | Validate and log generation selection immediately |
-| `POST /api/adaptive-chat` | Detect emotion, query rules, construct prompt, and stream response |
+|---|---|
+| `POST /api/adaptive-chat/onboarding` | Validate and log generation selection |
+| `POST /api/adaptive-chat` | Validate input, classify or assign emotion, retrieve guidance, and stream response |
 
-## Available Scripts
+## Commands
 
 | Command | Purpose |
-| --- | --- |
+|---|---|
 | `npm run dev` | Start development server |
 | `npm run build` | Create production build |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
-
-## Troubleshooting
-
-- **No generation log in the terminal**: check that the development server is running and inspect the server terminal, not only browser DevTools.
-- **No reply / HTTP 400**: the request did not contain usable user text.
-- **HTTP 500/503 or offline message**: the emotion detector or chatbot service is unavailable. Reload the page or try contacting the researchers, then check the Next.js terminal error.
-- **Emotion is `null`**: the detector returned an unsupported label; the chatbot intentionally falls back to `BASE_PROMPT` without emoji guidance.
-- **No rules are logged**: there is no matching generation/emotion context in `library.csv`; the chatbot intentionally generates a normal response without adaptive guidance.
-- **Conversation does not persist**: storage is browser-local and only saves non-empty completed conversations. Use **New chat** to clear it.

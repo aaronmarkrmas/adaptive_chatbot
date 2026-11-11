@@ -4,18 +4,11 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useCallback, useEffect, useRef, useState } from "react";
 import OnboardingModal from "@/components/OnboardingModal";
+import { STARTER_PROMPTS, type StarterPromptId } from "@/lib/adaptive/starterPrompts";
 
 const STORAGE_KEY = "chatbot:conversation:v1";
 const ONBOARDED_KEY = "chatbot:onboarded:v1";
 const GENERATION_KEY = "chatbot:generation:v1";
-
-const STARTERS = [
-  "I Felt hopeful when I met my betterhalf for the first time. She gives me hope for my remaining life without saying anything. I feel hopeful after my marriage.",
-  "One year during christmas, i did not get a single gift. It was a rough day for me.",
-  "A recent job interview that I had made me feel very anxious because I felt like I didn't come prepared.",
-  "I ate all my kids cookies and blamed it on the dog.",
-  "I once lost my job and got mad.",
-];
 
 function loadMessages(): UIMessage[] {
   if (typeof window === "undefined") return [];
@@ -80,24 +73,17 @@ export default function ChatPage() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, status]);
 
-  const focusInput = useCallback(() => textareaRef.current?.focus(), []);
-
-  useEffect(() => {
-      if (status === "ready" && !showOnboarding) focusInput();
-  }, [status, showOnboarding, focusInput]);
-
   const send = useCallback(
-    (text: string) => {
+    (text: string, promptId?: StarterPromptId) => {
       const trimmed = text.trim();
       if (!trimmed || isBusy) return;
       void sendMessage(
         { text: trimmed },
-        { body: { generation: window.localStorage.getItem(GENERATION_KEY) } },
+        { body: { generation: window.localStorage.getItem(GENERATION_KEY), ...(promptId ? { promptId } : {}) } },
       );
       setInput("");
-      requestAnimationFrame(() => focusInput());
     },
-    [isBusy, sendMessage, focusInput],
+    [isBusy, sendMessage],
   );
 
   const startFresh = () => {
@@ -106,7 +92,6 @@ export default function ChatPage() {
     window.localStorage.removeItem(ONBOARDED_KEY);
     window.localStorage.removeItem(GENERATION_KEY);
     setOnboarded(false);
-    focusInput();
   };
 
   const isEmpty = messages.length === 0;
@@ -164,14 +149,14 @@ export default function ChatPage() {
                   </p>
                 </div>
                 <div className="grid w-full max-w-sm gap-2 sm:grid-cols-2">
-                  {STARTERS.map((starter) => (
+                  {STARTER_PROMPTS.map((starter) => (
                     <button
-                      key={starter}
+                      key={starter.id}
                       type="button"
-                      onClick={() => send(starter)}
+                      onClick={() => send(starter.text, starter.id)}
                       className="min-h-10 rounded-md border border-border bg-card px-3 py-2 text-left text-sm transition-colors hover:bg-secondary"
                     >
-                      {starter}
+                      {starter.text}
                     </button>
                   ))}
                 </div>
@@ -209,13 +194,15 @@ export default function ChatPage() {
             )}
             {error && (
               <div className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-                The chatbot is offline. Please reload the page or try contacting the researchers.
+                {error.message.includes("limited to emotional")
+                  ? "This chatbot is limited to emotional and supportive conversations."
+                  : "The chatbot is offline. Please reload the page or try contacting the researchers."}
               </div>
             )}
           </div>
         </div>
 
-        <div className="border-t border-border bg-card px-3 py-3 sm:px-6 sm:py-4">
+        <div className="border-t border-border bg-card px-3 py-3 text-center text-xs text-muted-foreground sm:px-6 sm:py-4">
           <form
             onSubmit={(event) => {
               event.preventDefault();
@@ -234,7 +221,7 @@ export default function ChatPage() {
                 }
               }}
               rows={2}
-              placeholder="Type your message…"
+              placeholder="Type an emotional or supportive message…"
               className="w-full resize-none bg-transparent px-3 py-3 text-sm outline-none placeholder:text-muted-foreground"
             />
             <div className="flex justify-end px-2 pb-2">
@@ -247,9 +234,6 @@ export default function ChatPage() {
               </button>
             </div>
           </form>
-          <p className="mt-2 text-center text-xs text-muted-foreground">
-            Your conversation is stored only in this browser.
-          </p>
         </div>
       </main>
     </div>
