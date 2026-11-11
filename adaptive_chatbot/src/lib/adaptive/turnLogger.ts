@@ -6,5 +6,8 @@ export function createRequestId() {
 }
 
 export function logStep(requestId: string, step: string, details: Record<string, unknown>) {
-  console.info(`[adaptive-chat][${requestId}] ${step}`, details);
+  void requestId;
+  void step;
+  void details;
+  // console.info(`[adaptive-chat][${requestId}] ${step}`, details);
 }

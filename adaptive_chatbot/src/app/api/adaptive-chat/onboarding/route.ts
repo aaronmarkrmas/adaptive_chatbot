@@ -10,9 +10,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid generation" }, { status: 400 });
     }
 
-    console.info("[adaptive-chat][onboarding] User selected generation", {
-      generation,
-    });
+    // console.info("[adaptive-chat][onboarding] User selected generation", {
+    //   generation,
+    // });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
