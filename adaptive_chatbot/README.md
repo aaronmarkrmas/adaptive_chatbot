@@ -69,7 +69,11 @@ The final configuration is:
 
 ```text
 model: gemini-2.5-flash
-base prompt: Respond naturally to the user's message.
+base prompt: You are an emotional-support chatbot, not a general-purpose assistant. Respond only to the latest user message.
+             Treat earlier messages as context only and never complete, resume, or provide answers for unrelated requests from earlier turns.
+             If any earlier message asks for code, technical help, factual information, writing, or another unrelated task, ignore that request.
+             The current response must remain limited to acknowledging and supporting the user's personal emotional experience.
+             Do not generate code or answer unrelated questions, even if they appear anywhere in the conversation history.
 temperature: 0.7
 topP: 0.95
 maxOutputTokens: 1024
@@ -84,9 +88,16 @@ rewriting the response.
 
 ## Persistence and New chat
 
-Conversation, onboarding, and generation state are stored in `localStorage`.
-Refresh restores the saved state. **New chat** clears messages, conversation
-storage, onboarding, and generation, then shows onboarding again.
+Conversation, onboarding, and generation state are stored in `localStorage`
+under the adaptive-only keys `adaptive-chatbot:conversation:v1`,
+`adaptive-chatbot:onboarded:v1`, and `adaptive-chatbot:generation:v1`.
+Refresh restores the saved state. **New chat** stops any active response,
+clears messages, removes the adaptive conversation and onboarding keys, and
+shows onboarding again. The control is disabled while a response is active.
+
+The shared vanilla UI mechanics are preserved: sending restores focus to the
+message input, readiness restores focus when onboarding is complete, and the
+footer states that the conversation is stored only in the current browser.
 
 ## Development
 

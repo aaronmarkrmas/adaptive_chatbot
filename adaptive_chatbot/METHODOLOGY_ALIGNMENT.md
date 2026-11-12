@@ -11,7 +11,8 @@ fixed-stimulus comparison.
 2. The browser sends the selection to
    `POST /api/adaptive-chat/onboarding`.
 3. The server validates and logs the selection. The browser stores the
-   onboarding and generation values in `localStorage`.
+   onboarding and generation values in `localStorage` under adaptive-only
+   keys.
 4. The user selects one of five starter prompts or enters free text.
 5. The client sends the full conversation history, generation, and an optional
    starter-prompt ID to `POST /api/adaptive-chat`.
@@ -78,16 +79,19 @@ with HTTP 400.
 
 The full current conversation is converted with `convertToModelMessages` and
 sent to Gemini in its original order. Completed conversation state is saved
-to `localStorage` and restored after refresh.
+to `localStorage` under `adaptive-chatbot:conversation:v1` and restored after
+refresh. The onboarding and generation values use
+`adaptive-chatbot:onboarded:v1` and `adaptive-chatbot:generation:v1`.
 
 Clicking **New chat**:
 
+- stops any active response stream before clearing state;
 - clears displayed messages;
-- removes the saved conversation;
-- removes onboarding and generation values; and
+- removes the adaptive conversation, onboarding, and generation values; and
 - shows onboarding again.
 
-The next message therefore starts without previous conversation history.
+The control is disabled while a response is active, and the next message
+therefore starts without previous conversation history.
 
 ## Rule library and guidance
 
@@ -119,7 +123,11 @@ condition:
 
 ```text
 model: gemini-2.5-flash
-base prompt: Respond naturally to the user's message.
+base prompt: You are an emotional-support chatbot, not a general-purpose assistant. Respond only to the latest user message.
+             Treat earlier messages as context only and never complete, resume, or provide answers for unrelated requests from earlier turns.
+             If any earlier message asks for code, technical help, factual information, writing, or another unrelated task, ignore that request.
+             The current response must remain limited to acknowledging and supporting the user's personal emotional experience.
+             Do not generate code or answer unrelated questions, even if they appear anywhere in the conversation history.
 temperature: 0.7
 topP: 0.95
 maxOutputTokens: 1024
@@ -182,6 +190,9 @@ The vanilla and adaptive conditions must use the same:
 - input restrictions and out-of-scope guard rail;
 - streaming and response display; and
 - failure and exclusion rules.
+
+The adaptive UI also preserves vanilla focus behavior after sending and when
+the chat becomes ready. Its footer retains the vanilla browser-storage notice.
 
 The intended generation difference is the adaptive condition's hidden
 generation-and-emotion emoji guidance. Emotion assignment for the five

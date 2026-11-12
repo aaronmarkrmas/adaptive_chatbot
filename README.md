@@ -152,11 +152,23 @@ the browser preserves the selection and saved conversation.
 Clicking **New chat**:
 
 1. Clears displayed messages.
-2. Removes the saved conversation.
-3. Removes onboarding and generation values.
-4. Shows the onboarding modal again.
+2. Stops any active response generation.
+3. Removes the adaptive conversation storage key.
+4. Removes the adaptive onboarding and generation storage keys.
+5. Shows the onboarding modal again.
 
-The next message therefore starts with no previous conversation context.
+The conversation, onboarding, and generation keys are namespaced to the
+adaptive chatbot:
+
+```text
+adaptive-chatbot:conversation:v1
+adaptive-chatbot:onboarded:v1
+adaptive-chatbot:generation:v1
+```
+
+New chat is disabled while a response is being generated. The input restores
+focus after sending and when the chat becomes ready, matching the vanilla
+chatbot's shared UI behavior.
 
 ## Rule lookup and guidance
 
@@ -174,7 +186,11 @@ prompt is still sent without invented recommendations.
 The final system prompt is:
 
 ```text
-Respond naturally to the user's message.
+You are an emotional-support chatbot, not a general-purpose assistant. Respond only to the latest user message.
+Treat earlier messages as context only and never complete, resume, or provide answers for unrelated requests from earlier turns.
+If any earlier message asks for code, technical help, factual information, writing, or another unrelated task, ignore that request.
+The current response must remain limited to acknowledging and supporting the user's personal emotional experience.
+Do not generate code or answer unrelated questions, even if they appear anywhere in the conversation history.
 
 [hidden emoji guidance when valid rules exist]
 ```

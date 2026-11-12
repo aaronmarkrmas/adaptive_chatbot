@@ -6,9 +6,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import OnboardingModal from "@/components/OnboardingModal";
 import { STARTER_PROMPTS, type StarterPromptId } from "@/lib/adaptive/starterPrompts";
 
-const STORAGE_KEY = "chatbot:conversation:v1";
-const ONBOARDED_KEY = "chatbot:onboarded:v1";
-const GENERATION_KEY = "chatbot:generation:v1";
+const STORAGE_KEY = "adaptive-chatbot:conversation:v1";
+const ONBOARDED_KEY = "adaptive-chatbot:onboarded:v1";
+const GENERATION_KEY = "adaptive-chatbot:generation:v1";
 
 function loadMessages(): UIMessage[] {
   if (typeof window === "undefined") return [];
@@ -47,7 +47,7 @@ export default function ChatPage() {
     return () => window.clearTimeout(timeoutId);
   }, []);
   const showOnboarding = onboarded === false;
-  const { messages, sendMessage, status, error, setMessages } = useChat({
+  const { messages, sendMessage, status, error, setMessages, stop } = useChat({
     id: "chatbot-single-conversation",
     transport: new DefaultChatTransport({ api: "/api/adaptive-chat" }),
   });
@@ -73,6 +73,12 @@ export default function ChatPage() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, status]);
 
+  const focusInput = useCallback(() => textareaRef.current?.focus(), []);
+
+  useEffect(() => {
+    if (status === "ready" && !showOnboarding) focusInput();
+  }, [status, showOnboarding, focusInput]);
+
   const send = useCallback(
     (text: string, promptId?: StarterPromptId) => {
       const trimmed = text.trim();
@@ -82,16 +88,19 @@ export default function ChatPage() {
         { body: { generation: window.localStorage.getItem(GENERATION_KEY), ...(promptId ? { promptId } : {}) } },
       );
       setInput("");
+      requestAnimationFrame(() => focusInput());
     },
-    [isBusy, sendMessage],
+    [isBusy, sendMessage, focusInput],
   );
 
   const startFresh = () => {
+    stop();
     setMessages([]);
     window.localStorage.removeItem(STORAGE_KEY);
     window.localStorage.removeItem(ONBOARDED_KEY);
     window.localStorage.removeItem(GENERATION_KEY);
     setOnboarded(false);
+    focusInput();
   };
 
   const isEmpty = messages.length === 0;
@@ -130,6 +139,7 @@ export default function ChatPage() {
           <button
             type="button"
             onClick={startFresh}
+            disabled={isBusy}
             className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:bg-primary/40"
           >
             New chat
@@ -202,7 +212,7 @@ export default function ChatPage() {
           </div>
         </div>
 
-        <div className="border-t border-border bg-card px-3 py-3 text-center text-xs text-muted-foreground sm:px-6 sm:py-4">
+        <div className="border-t border-border bg-card px-3 py-3 sm:px-6 sm:py-4">
           <form
             onSubmit={(event) => {
               event.preventDefault();
@@ -234,6 +244,9 @@ export default function ChatPage() {
               </button>
             </div>
           </form>
+          <p className="mt-2 text-center text-xs text-muted-foreground">
+            Your conversation is stored only in this browser.
+          </p>
         </div>
       </main>
     </div>
