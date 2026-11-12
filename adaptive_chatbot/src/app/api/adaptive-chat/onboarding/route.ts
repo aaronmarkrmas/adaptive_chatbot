@@ -12,7 +12,8 @@ export async function POST(req: NextRequest) {
 
     // console.info("[adaptive-chat][onboarding] User selected generation", {
     //   generation,
-    // });
+    // }); 
+    // commented out the console.info to avoid logging sensitive information in production
 
     return NextResponse.json({ ok: true });
   } catch (error) {

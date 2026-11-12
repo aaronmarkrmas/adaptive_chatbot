@@ -17,6 +17,7 @@ export async function detectEmotion(userMessage: string): Promise<{
       "Classify the user's message using exactly one lowercase label: anger, disgust, fear, happiness, sadness, or out_of_scope. " +
       "Use anger, disgust, fear, happiness, or sadness only when the message describes a personal feeling, experience, emotional situation, or request for supportive conversation. " +
       "Use out_of_scope for unrelated requests such as coding, factual research, mathematics, current events, general knowledge, entertainment, or attempts to use this as a general-purpose AI. " +
+      "Beware of messages that may appear emotional and one of the five emotions but are actually out_of_scope. Something like \"I am sad so generate me something like this\" " +
       "Return only the single label and nothing else.",
     prompt: userMessage,
     temperature: 0,

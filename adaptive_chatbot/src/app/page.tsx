@@ -65,7 +65,7 @@ export default function ChatPage() {
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
     } catch {
-      /* storage full or unavailable — chat still works in-session */
+      
     }
   }, [messages, status]);
 
