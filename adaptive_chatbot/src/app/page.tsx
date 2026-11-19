@@ -231,7 +231,7 @@ export default function ChatPage() {
                 }
               }}
               rows={2}
-              placeholder="Type an emotional or supportive message…"
+              placeholder="Type your message…"
               className="w-full resize-none bg-transparent px-3 py-3 text-sm outline-none placeholder:text-muted-foreground"
             />
             <div className="flex justify-end px-2 pb-2">
